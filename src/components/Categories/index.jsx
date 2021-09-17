@@ -1,18 +1,14 @@
 import styled from "styled-components";
 import { mobile, tablet, tabletPro, laptop, laptopPro } from "../../responsive";
 
-const Categories = ({
-  categories,
-  setCurrentCategory,
-  currentCategory,
-}) => {
+const Categories = ({ categories, setCurrentCategory, currentCategory }) => {
   const changeCategory = (category) => {
     setCurrentCategory(category);
     const firstItem = document.getElementById("firstItem");
     firstItem.scrollIntoView({
       behavior: "smooth",
     });
-  }
+  };
 
   return (
     <Container>
@@ -40,6 +36,8 @@ const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin-top: 20px;
+  padding-left: 20px;
+
   align-items: center;
 
   ${tabletPro({
@@ -47,7 +45,7 @@ const Container = styled.div`
   })}
 
   ${mobile({
-    minWidth: "100vw"
+    marginTop: "10px",
   })}
 `;
 

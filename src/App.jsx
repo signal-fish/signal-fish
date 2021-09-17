@@ -86,7 +86,6 @@ const Wrapper = styled.div`
   width: 100vw;
   min-height: 600px;
   position: absolute;
-
   max-width: 1780px;
   max-height: 1300px;
 
@@ -101,8 +100,8 @@ const Wrapper = styled.div`
   ${mobile({
     flexDirection: "column",
     justifyContent: "flex-start",
-    width: "auto",
-    height: "auto"
+    // width: "auto",
+    // height: "auto"
   })}
 `;
 

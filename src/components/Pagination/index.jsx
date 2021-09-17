@@ -141,7 +141,7 @@ const Container = styled.div`
 
   ${tabletPro({
     marginBottom: "50px",
-    marginLeft: "-20px",
+    // marginLeft: "-20px",
   })}
 
   ${mobile({

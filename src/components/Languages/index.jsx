@@ -90,7 +90,6 @@ const Language = styled.button`
   cursor: pointer;
   font-family: "poppins", sans-serif;
   font-family: "Noto Sans SC", sans-serif;
-
   &:hover {
     transition: 0.2s;
     transform: scale(1.1);

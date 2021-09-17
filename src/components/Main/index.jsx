@@ -55,7 +55,6 @@ const Container = styled.div`
   flex: 5;
   display: flex;
   flex-direction: column;
-  margin-left: 20px;
   position: relative;
 
   ${mobile({
@@ -69,6 +68,7 @@ const ProjectWrapper = styled.div`
   align-items: center;
   margin-top: 20px;
   min-height: 45px;
+  margin-left: 20px;
 
   ${mobile({
     flex:"none",
@@ -119,6 +119,7 @@ const HrWrapper = styled.div`
   min-height: 5px;
   display: flex;
   align-items: center;
+  margin-left: 20px;
 `;
 
 const Hr = styled.hr`

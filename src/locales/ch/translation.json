@@ -1,0 +1,41 @@
+{
+  "Sidebar": {
+    "Name": "余幸浩",
+    "JobTitle": "前端工程师",
+    "SkillTitle": "个人技能",
+    "Tooltip": {
+      "html5": "HTML 5",
+      "css3": "CSS 3",
+      "javascript": "JavaScript",
+      "react": "React",
+      "nodejs": "Node JS",
+      "express": "Express",
+      "mongodb": "MongoDB",
+      "bootstrap": "Bootstrap",
+      "jquery": "jQuery",
+      "webpack": "Webpack",
+      "git": "Git",
+      "mysql": "MySQL",
+      "python": "Python",
+      "linux": "Linux"
+    },
+    "LanguageTitle": "语言",
+    "email": "发送邮件"
+  },
+
+  "Main": {
+    "ProjectName": "项目",
+    "Portfolios": {},
+    "Pagination": {
+      "first": "首页",
+      "prev": "上一页",
+      "next": "下一页",
+      "last": "末页"
+    }
+  },
+
+  "Languages": {
+    "en": "英语",
+    "ch": "中文"
+  }
+}

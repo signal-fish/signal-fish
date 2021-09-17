@@ -1,0 +1,42 @@
+{
+  "Sidebar": {
+    "Name": "Signal Fish",
+    "JobTitle": "Web Developer",
+    "SkillTitle": "Skills",
+    "Tooltip": {
+      "html5": "HTML 5",
+      "css3": "CSS 3",
+      "javascript": "JavaScript",
+      "react": "React",
+      "nodejs": "Node JS",
+      "express": "Express",
+      "mongodb": "MongoDB",
+      "bootstrap": "Bootstrap",
+      "jquery": "jQuery",
+      "webpack": "Webpack",
+      "git": "Git",
+      "mysql": "MySQL",
+      "python": "Python",
+      "linux": "Linux"
+    },
+    "LanguageTitle": "Languages",
+    "email": "Email Me"
+  },
+
+  "Main": {
+    "ProjectName": "Projects",
+    "Portfolios": {},
+
+    "Pagination": {
+      "first": "First",
+      "prev": "Prev",
+      "next": "Next",
+      "last": "Last"
+    }
+  }, 
+
+  "Languages": {
+    "en": "English",
+    "ch": "Chinese"
+  }
+}

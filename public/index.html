@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background: linear-gradient(to bottom right, lightskyblue, rgba(255, 255, 255, 0.5), lightgreen);
+      background-attachment: fixed;
+    }
+  </style>
+  <title>Signal Fish's Portfolio</title>
+</head>
+
+<body id="body">
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+
+  <script>
+    window.onload = function () {
+      var btn = document.getElementById("dropdownButton")
+      var languages = document.querySelectorAll(".language")
+
+      btn.addEventListener("click", function () {
+
+        var display = document.getElementById("dropdownContent").style.display
+        if (display === "") {
+          document.getElementById("dropdownContent").style.display = "block";
+          document.getElementById("arrow").style.transform = "rotate(180deg)";
+        } else {
+          document.getElementById("dropdownContent").style.display = "";
+          document.getElementById("arrow").style.transform = "";
+        }
+      })
+
+      languages.forEach((language) => {
+        language.addEventListener("click", function () {
+          document.getElementById("dropdownContent").style.display = "";
+          document.getElementById("arrow").style.transform = "";
+        })
+      })
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.js": "/signal-fish/static/js/main.bcd36e34.chunk.js",
+    "main.js.map": "/signal-fish/static/js/main.bcd36e34.chunk.js.map",
+    "runtime-main.js": "/signal-fish/static/js/runtime-main.154e4f5b.js",
+    "runtime-main.js.map": "/signal-fish/static/js/runtime-main.154e4f5b.js.map",
+    "static/js/2.92af1238.chunk.js": "/signal-fish/static/js/2.92af1238.chunk.js",
+    "static/js/2.92af1238.chunk.js.map": "/signal-fish/static/js/2.92af1238.chunk.js.map",
+    "index.html": "/signal-fish/index.html",
+    "static/js/2.92af1238.chunk.js.LICENSE.txt": "/signal-fish/static/js/2.92af1238.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.154e4f5b.js",
+    "static/js/2.92af1238.chunk.js",
+    "static/js/main.bcd36e34.chunk.js"
+  ]
+}

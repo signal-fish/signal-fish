@@ -25,7 +25,15 @@
 
   "Main": {
     "ProjectName": "项目",
-    "Portfolios": {},
+    "Portfolios": {
+      "title": {
+        "movie website": "电影网页",
+        "dictinary app": "字典应用",
+        "resume": "简历",
+        "book store": "书店",
+        "animated moon": "动态月球"
+      }
+    },
     "Pagination": {
       "first": "首页",
       "prev": "上一页",

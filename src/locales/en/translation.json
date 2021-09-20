@@ -3,6 +3,7 @@
     "Name": "Signal Fish",
     "JobTitle": "Web Developer",
     "SkillTitle": "Skills",
+
     "Tooltip": {
       "html5": "HTML 5",
       "css3": "CSS 3",
@@ -19,13 +20,23 @@
       "python": "Python",
       "linux": "Linux"
     },
+
     "LanguageTitle": "Languages",
     "email": "Email Me"
   },
 
   "Main": {
     "ProjectName": "Projects",
-    "Portfolios": {},
+
+    "Portfolios": {
+      "title": {
+        "movie website": "Movie Website",
+        "dictinary app": "Dictinary App",
+        "resume": "Resume",
+        "book store": "Book Store",
+        "animated moon": "Animated Moon"
+      }
+    },
 
     "Pagination": {
       "first": "First",

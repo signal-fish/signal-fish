@@ -1,9 +1,11 @@
 import styled from "styled-components";
 import { mobile, tablet, tabletPro, laptop, laptopPro } from "../../responsive";
+import { useTranslation } from "react-i18next";
 
 const Portfolios = ({ portfolios, currentPageNumber, portfoliosPerPage }) => {
   const portfoliosDisplayed = currentPageNumber * portfoliosPerPage;
 
+  const { t } = useTranslation();
   return (
     <Container id="projects">
       {portfolios
@@ -13,7 +15,7 @@ const Portfolios = ({ portfolios, currentPageNumber, portfoliosPerPage }) => {
           return (
             <Wrapper id={i === 0 ? "firstItem" : ""} key={id}>
               <Portfolio image={image}>
-                <Title>{title}</Title>
+                <Title>{t(`Main.Portfolios.title.${title}`)}</Title>
                 <LinkContainer>
                   <Link
                     href={webLink}

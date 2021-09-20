@@ -2,12 +2,15 @@ import styled from "styled-components";
 import { mobile, tablet, tabletPro, laptop, laptopPro } from "../../responsive";
 
 const Categories = ({ categories, setCurrentCategory, currentCategory }) => {
-  const changeCategory = (category) => {
-    setCurrentCategory(category);
-    const firstItem = document.getElementById("firstItem");
-    firstItem.scrollIntoView({
-      behavior: "smooth",
-    });
+  
+  const changeCategory = (category, currentCategory) => {
+    if ((category !== currentCategory)) {
+      setCurrentCategory(category);
+      const firstItem = document.getElementById("firstItem");
+      firstItem.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
   };
 
   return (
@@ -20,7 +23,7 @@ const Categories = ({ categories, setCurrentCategory, currentCategory }) => {
             type="button"
             key={index}
             onClick={() => {
-              changeCategory(category);
+              changeCategory(category, currentCategory);
             }}
           >
             {category}

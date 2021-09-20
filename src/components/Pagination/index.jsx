@@ -22,7 +22,7 @@ const Pagination = ({
     firstItem.scrollIntoView({
       behavior: "smooth",
     });
-  }
+  };
 
   const handlePrev = (currentPageNumber) => {
     if (currentPageNumber === 0) {
@@ -37,26 +37,30 @@ const Pagination = ({
   };
 
   const handleNext = (currentPageNumber, pageCount) => {
-    if (currentPageNumber === pageCount - 1) {
-      setCurrentPageNumber(pageCount - 1);
-      return;
+    if (pageCount) {
+      if (currentPageNumber === pageCount - 1) {
+        setCurrentPageNumber(pageCount - 1);
+        return;
+      }
+      setCurrentPageNumber(currentPageNumber + 1);
+      const firstItem = document.getElementById("firstItem");
+      firstItem.scrollIntoView({
+        behavior: "smooth",
+      });
     }
-    setCurrentPageNumber(currentPageNumber + 1);
-    const firstItem = document.getElementById("firstItem");
-    firstItem.scrollIntoView({
-      behavior: "smooth",
-    });
   };
 
   const handleLast = (currentPageNumber, pageCount) => {
-    if (currentPageNumber === pageCount - 1) {
-      return;
+    if (pageCount) {
+      if (currentPageNumber === pageCount - 1) {
+        return;
+      }
+      setCurrentPageNumber(pageCount - 1);
+      const firstItem = document.getElementById("firstItem");
+      firstItem.scrollIntoView({
+        behavior: "smooth",
+      });
     }
-    setCurrentPageNumber(pageCount - 1);
-    const firstItem = document.getElementById("firstItem");
-    firstItem.scrollIntoView({
-      behavior: "smooth",
-    });
   };
 
   return (
@@ -290,25 +294,38 @@ const NextButton = styled.button`
   font-size: 23px;
 
   cursor: ${(props) =>
-    props.currentPageNumber === props.pageCount - 1 && "not-allowed"};
+    props.pageCount === 0
+      ? "not-allowed"
+      : props.currentPageNumber === props.pageCount - 1 && "not-allowed"};
   background-color: ${(props) =>
-    props.currentPageNumber === props.pageCount - 1
+    props.pageCount === 0
+      ? "lightgray"
+      : props.currentPageNumber === props.pageCount - 1
       ? "lightgray"
       : "transparent"};
   color: ${(props) =>
-    props.currentPageNumber === props.pageCount - 1 && "rgba(0, 0, 0, 0.3)"};
+    props.pageCount === 0
+      ? "rgba(0, 0, 0, 0.3)"
+      : props.currentPageNumber === props.pageCount - 1 &&
+        "rgba(0, 0, 0, 0.3)"};
   border: ${(props) =>
-    props.currentPageNumber === props.pageCount - 1 && "lightgray"};
+    props.pageCount === 0
+      ? "lightgray"
+      : props.currentPageNumber === props.pageCount - 1 && "lightgray"};
 
   &:hover {
     background: ${(props) =>
+      props.pageCount !== 0 &&
       props.currentPageNumber !== props.pageCount - 1 &&
       "linear-gradient(to bottom right, lightskyblue, lightgreen)"};
     box-shadow: ${(props) =>
+      props.pageCount !== 0 &&
       props.currentPageNumber !== props.pageCount - 1 &&
       "1px 1px 3px rgba(0, 0, 0, 0.6)"};
     border: ${(props) =>
-      props.currentPageNumber !== props.pageCount - 1 && "none"};
+      props.pageCount !== 0 &&
+      props.currentPageNumber !== props.pageCount - 1 &&
+      "none"};
   }
 
   ${laptopPro({
@@ -356,25 +373,38 @@ const LastButton = styled.button`
   font-size: 23px;
 
   cursor: ${(props) =>
-    props.currentPageNumber === props.pageCount - 1 && "not-allowed"};
+    props.pageCount === 0
+      ? "not-allowed"
+      : props.currentPageNumber === props.pageCount - 1 && "not-allowed"};
   background-color: ${(props) =>
-    props.currentPageNumber === props.pageCount - 1
+    props.pageCount === 0
+      ? "lightgray"
+      : props.currentPageNumber === props.pageCount - 1
       ? "lightgray"
       : "transparent"};
   color: ${(props) =>
-    props.currentPageNumber === props.pageCount - 1 && "rgba(0, 0, 0, 0.3)"};
+    props.pageCount === 0
+      ? "rgba(0, 0, 0, 0.3)"
+      : props.currentPageNumber === props.pageCount - 1 &&
+        "rgba(0, 0, 0, 0.3)"};
   border: ${(props) =>
-    props.currentPageNumber === props.pageCount - 1 && "lightgray"};
+    props.pageCount === 0
+      ? "lightgray"
+      : props.currentPageNumber === props.pageCount - 1 && "lightgray"};
 
   &:hover {
     background: ${(props) =>
+      props.pageCount !== 0 &&
       props.currentPageNumber !== props.pageCount - 1 &&
       "linear-gradient(to bottom right, lightskyblue, lightgreen)"};
     box-shadow: ${(props) =>
+      props.pageCount !== 0 &&
       props.currentPageNumber !== props.pageCount - 1 &&
       "1px 1px 3px rgba(0, 0, 0, 0.6)"};
     border: ${(props) =>
-      props.currentPageNumber !== props.pageCount - 1 && "none"};
+      props.pageCount !== 0 &&
+      props.currentPageNumber !== props.pageCount - 1 &&
+      "none"};
   }
 
   ${laptopPro({

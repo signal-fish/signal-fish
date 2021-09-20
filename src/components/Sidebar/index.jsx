@@ -36,13 +36,13 @@ const Sidebar = () => {
                 alt="linkedin"
               />
             </Link>
-            <Link
+            {/* <Link
               href="https://twitter.com/fish_signal"
               target="_blank"
               rel="noreferrer noopener"
             >
               <SocialIcon src="assets/icons/social/twitter.svg" alt="twitter" />
-            </Link>
+            </Link> */}
           </Social>
         </Profile>
         <Info>

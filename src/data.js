@@ -39,6 +39,14 @@ const portfolios = [
     webLink: "https://signal-fish.github.io/animated-moon/",
     sourceLink: "https://github.com/signal-fish/animated-moon",
   },
+  {
+    id: 6,
+    title: "animated tea cup",
+    category: "css animation",
+    image: "assets/portfolio/css-animation/animated-tea-cup.png",
+    webLink: "https://signal-fish.github.io/animated-tea-cup/",
+    sourceLink: "https://github.com/signal-fish/animated-tea-cup",
+  },
 ];
 
 export default portfolios;

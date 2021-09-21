@@ -92,16 +92,12 @@ const Wrapper = styled.div`
   ${LargeVersion({
     left: "50%",
     transform: "translate(-50%)",
-    margin:"20px 20px 20px 20px",
-    borderRadius:"5px",
-    boxShadow: "5px 5px 8px rgba(0, 0, 0, 0.8)",
+    borderRadius: "5px",
   })}
 
   ${mobile({
     flexDirection: "column",
     justifyContent: "flex-start",
-    // width: "auto",
-    // height: "auto"
   })}
 `;
 

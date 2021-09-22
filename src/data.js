@@ -33,7 +33,7 @@ const portfolios = [
   // },
   {
     id: 5,
-    title: "animated moon",
+    title: "moon",
     category: "css animation",
     image: "assets/portfolio/css-animation/animated-moon.png",
     webLink: "https://signal-fish.gitee.io/animated-moon/",
@@ -41,11 +41,19 @@ const portfolios = [
   },
   {
     id: 6,
-    title: "animated tea cup",
+    title: "tea cup",
     category: "css animation",
     image: "assets/portfolio/css-animation/animated-tea-cup.png",
     webLink: "https://signal-fish.gitee.io/animated-tea-cup/",
     sourceLink: "https://github.com/signal-fish/animated-tea-cup",
+  },
+  {
+    id: 6,
+    title: "clock",
+    category: "css animation",
+    image: "assets/portfolio/css-animation/clock.png",
+    webLink: "https://signal-fish.gitee.io/clock/",
+    sourceLink: "https://github.com/signal-fish/clock",
   },
 ];
 

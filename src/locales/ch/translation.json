@@ -31,8 +31,9 @@
         "dictinary app": "字典应用",
         "resume": "简历",
         "book store": "书店",
-        "animated moon": "动态月球",
-        "animated tea cup": "动态茶杯"
+        "moon": "月球",
+        "tea cup": "茶杯",
+        "clock": "时钟"
       }
     },
     "Pagination": {

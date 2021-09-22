@@ -34,8 +34,9 @@
         "dictinary app": "Dictinary App",
         "resume": "Resume",
         "book store": "Book Store",
-        "animated moon": "Animated Moon",
-        "animated tea cup": "Animated Tea Cup"
+        "moon": "Moon",
+        "tea cup": "Tea Cup",
+        "clock": "Clock"
       }
     },
 

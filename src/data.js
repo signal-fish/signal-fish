@@ -63,6 +63,14 @@ const portfolios = [
     webLink: "https://signal-fish.gitee.io/shining-text/",
     sourceLink: "https://github.com/signal-fish/shining-text",
   },
+  {
+    id: 9,
+    title: "birthday reminder",
+    category: "react",
+    image: "assets/portfolio/react/birthday-reminder.png",
+    webLink: "https://signal-fish.gitee.io/birthday-reminder/",
+    sourceLink: "https://github.com/signal-fish/birthday-reminder",
+  },
 ];
 
 export default portfolios;

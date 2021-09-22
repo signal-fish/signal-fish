@@ -18,7 +18,7 @@ const App = () => {
   const [currentCategory, setCurrentCategory] = useState("All");
   const [currentPageNumber, setCurrentPageNumber] = useState(0);
 
-  const portfoliosPerPage = 12;
+  const portfoliosPerPage = 2;
   const pageCount = Math.ceil(portfolios.length / portfoliosPerPage);
 
   const filterPortfolios = (category) => {

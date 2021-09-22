@@ -48,12 +48,20 @@ const portfolios = [
     sourceLink: "https://github.com/signal-fish/animated-tea-cup",
   },
   {
-    id: 6,
+    id: 7,
     title: "clock",
     category: "css animation",
     image: "assets/portfolio/css-animation/clock.png",
     webLink: "https://signal-fish.gitee.io/clock/",
     sourceLink: "https://github.com/signal-fish/clock",
+  },
+  {
+    id: 8,
+    title: "shining text",
+    category: "css animation",
+    image: "assets/portfolio/css-animation/shining-text.png",
+    webLink: "https://signal-fish.gitee.io/shining-text/",
+    sourceLink: "https://github.com/signal-fish/shining-text",
   },
 ];
 

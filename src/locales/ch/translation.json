@@ -35,7 +35,11 @@
         "tea cup": "茶杯",
         "clock": "时钟",
         "shining text": "闪烁文字",
-        "birthday reminder": "生日提醒"
+        "birthday reminder": "生日提醒",
+        "loading": "加载中",
+        "tours": "旅游景点",
+        "accordion": "手风琴",
+        "menu": "菜单"
       }
     },
     "Pagination": {

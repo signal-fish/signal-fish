@@ -71,6 +71,38 @@ const portfolios = [
     webLink: "https://signal-fish.gitee.io/birthday-reminder/",
     sourceLink: "https://github.com/signal-fish/birthday-reminder",
   },
+  {
+    id: 10,
+    title: "loading",
+    category: "css animation",
+    image: "assets/portfolio/css-animation/loading.png",
+    webLink: "https://signal-fish.gitee.io/loading/",
+    sourceLink: "https://github.com/signal-fish/loading",
+  },
+  {
+    id: 11,
+    title: "tours",
+    category: "react",
+    image: "assets/portfolio/react/tours.png",
+    webLink: "https://signal-fish.gitee.io/tours/",
+    sourceLink: "https://github.com/signal-fish/tours",
+  },
+  {
+    id: 12,
+    title: "accordion",
+    category: "react",
+    image: "assets/portfolio/react/accordion.png",
+    webLink: "https://signal-fish.gitee.io/accordion/",
+    sourceLink: "https://github.com/signal-fish/accordion",
+  },
+  {
+    id: 13,
+    title: "menu",
+    category: "react",
+    image: "assets/portfolio/react/menu.png",
+    webLink: "https://signal-fish.gitee.io/menu/",
+    sourceLink: "https://github.com/signal-fish/menu",
+  },
 ];
 
 export default portfolios;

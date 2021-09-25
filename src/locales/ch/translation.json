@@ -38,8 +38,10 @@
         "birthday reminder": "生日提醒",
         "loading": "加载中",
         "tours": "旅游景点",
-        "accordion": "手风琴",
-        "menu": "菜单"
+        "accordion": "Accordion",
+        "menu": "菜单",
+        "tabs": "Tabs",
+        "slider": "Slider"
       }
     },
     "Pagination": {

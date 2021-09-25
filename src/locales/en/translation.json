@@ -42,7 +42,9 @@
         "loading": "Loading",
         "tours": "Tours",
         "accordion": "Accordion",
-        "menu": "Menu"
+        "menu": "Menu",
+        "tabs": "Tabs",
+        "slider": "Slider"
       }
     },
 

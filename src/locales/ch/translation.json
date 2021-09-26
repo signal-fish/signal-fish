@@ -41,7 +41,8 @@
         "accordion": "Accordion",
         "menu": "菜单",
         "tabs": "Tabs",
-        "slider": "Slider"
+        "slider": "Slider",
+        "shopping list": "购物清单"
       }
     },
     "Pagination": {

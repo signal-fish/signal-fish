@@ -42,7 +42,8 @@
         "menu": "菜单",
         "tabs": "Tabs",
         "slider": "Slider",
-        "shopping list": "购物清单"
+        "shopping list": "购物清单",
+        "sidebar and modal": "Sidebar And Modal"
       }
     },
     "Pagination": {

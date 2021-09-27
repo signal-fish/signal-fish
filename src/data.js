@@ -128,12 +128,20 @@ const portfolios = [
     sourceLink: "https://github.com/signal-fish/shopping-list",
   },
   {
-    id: 16,
+    id: 17,
     title: "sidebar and modal",
     category: "react",
     image: "assets/portfolio/react/sidebar-modal.png",
     webLink: "https://signal-fish.gitee.io/sidebar-modal/",
     sourceLink: "https://github.com/signal-fish/sidebar-modal",
+  },
+  {
+    id: 18,
+    title: "navbar",
+    category: "react",
+    image: "assets/portfolio/react/navbar.png",
+    webLink: "https://signal-fish.gitee.io/navbar/",
+    sourceLink: "https://github.com/signal-fish/navbar",
   },
 ];
 

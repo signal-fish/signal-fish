@@ -43,7 +43,8 @@
         "tabs": "Tabs",
         "slider": "Slider",
         "shopping list": "购物清单",
-        "sidebar and modal": "Sidebar And Modal"
+        "sidebar and modal": "Sidebar And Modal",
+        "navbar": "Navbar"
       }
     },
     "Pagination": {

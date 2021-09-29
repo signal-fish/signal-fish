@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import i18next from "i18next";
 import { useTranslation } from "react-i18next";
-import { GoChevronDown } from "react-icons/go";
 
 const Languages = () => {
   const { t } = useTranslation();
@@ -16,9 +15,7 @@ const Languages = () => {
       <Dropdown>
         <Button id="dropdownButton">
           <Global src="assets/global.svg" alt="global" />
-          <ArrowIcon id="arrow">
-            <GoChevronDown />
-          </ArrowIcon>
+          <Arrow id="arrow" src="assets/arrow.png" alt="arrow-down" />
         </Button>
         <DropdownContent id="dropdownContent">
           <Language className="language" onClick={() => handleChange("en")}>
@@ -41,7 +38,13 @@ const Container = styled.div`
   position: fixed;
   right: 0;
   top: 0;
-  z-index: 999;
+  z-index:999;
+  background: linear-gradient(
+    to bottom left,
+    lightgreen,
+    rgba(255, 255, 255, 0.5),
+    lightskyblue
+  );
 `;
 
 const Dropdown = styled.div`
@@ -61,8 +64,14 @@ const Button = styled.button`
   cursor: pointer;
   border: none;
   background: transparent;
+
   &:hover {
-    background: #541d36;
+    background: linear-gradient(
+      to bottom right,
+      lightgreen,
+      rgba(255, 255, 255, 0.5),
+      lightskyblue
+    );
   }
 `;
 
@@ -73,7 +82,7 @@ const DropdownContent = styled.div`
 
 const Language = styled.button`
   padding: 5px;
-  color: #fff;
+  color: rgba(0, 0, 0, 0.8);
   background: transparent;
   border: none;
   display: flex;
@@ -81,12 +90,9 @@ const Language = styled.button`
   cursor: pointer;
   font-family: "poppins", sans-serif;
   font-family: "Noto Sans SC", sans-serif;
-  color: #fff;
-
   &:hover {
     transition: 0.2s;
     transform: scale(1.1);
-    background: #541d36;
   }
 `;
 
@@ -95,11 +101,8 @@ const Global = styled.img`
   width: 22px;
 `;
 
-const ArrowIcon = styled.div`
-  color: #fff;
-  font-size: 26px;
-  display: flex;
-  align-items: center;
+const Arrow = styled.img`
+  width: 15px;
 `;
 
 const Flag = styled.img`

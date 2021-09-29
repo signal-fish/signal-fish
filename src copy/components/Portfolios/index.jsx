@@ -49,7 +49,6 @@ const Portfolios = ({ portfolios, currentPageNumber, portfoliosPerPage }) => {
 };
 
 const Container = styled.div`
-  background: #541d36;
   flex: 22;
   display: grid;
   grid-template-columns: repeat(3, minmax(100px, 330px));
@@ -65,11 +64,15 @@ const Container = styled.div`
   }
 
   ::-webkit-scrollbar-track {
-    background: #541d36;
+    background: lightgray;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #000;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.8);
   }
 
   ${laptopPro({
@@ -157,8 +160,18 @@ const Portfolio = styled.div`
 `;
 
 const Title = styled.h2`
-  color: rgba(255, 255, 255, .9);
+  background: linear-gradient(
+    to bottom right,
+    #d8d3f5,
+    #b4aed8,
+    #8e87b6,
+    #686091,
+    #453e68
+  );
   font-size: 30px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   margin: 15px 0;
   padding-bottom: 5px;
   opacity: 0;

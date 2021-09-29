@@ -3,8 +3,7 @@ import Categories from "../Categories";
 import Portfolios from "../Portfolios";
 import Pagination from "../Pagination";
 import { useTranslation } from "react-i18next";
-import { AiFillProject } from "react-icons/ai";
-import { mobile, tablet, tabletPro } from "../../responsive";
+import { mobile, tablet, tabletPro} from "../../responsive";
 
 const Main = ({
   categories,
@@ -16,16 +15,14 @@ const Main = ({
   portfoliosPerPage,
   pageCount,
   generateArray,
-  scrollItem,
+  scrollItem
 }) => {
   const { t } = useTranslation();
 
   return (
     <Container>
       <ProjectWrapper>
-        <ProjectIcon>
-          <AiFillProject />
-        </ProjectIcon>
+        <Image src="assets/projects.png"></Image>
         <Title>{t("Main.ProjectName")}</Title>
       </ProjectWrapper>
       <HrWrapper>
@@ -61,7 +58,7 @@ const Container = styled.div`
   position: relative;
 
   ${mobile({
-    flex: "none",
+    flex: "none"
   })}
 `;
 
@@ -74,29 +71,26 @@ const ProjectWrapper = styled.div`
   margin-left: 20px;
 
   ${mobile({
-    flex: "none",
+    flex:"none",
   })}
 `;
 
-const ProjectIcon = styled.div`
-  color: white;
-  font-size: 28px;
-  display: flex;
-  align-items: center;
-  margin-right: 5px;
+const Image = styled.img`
+  width: 35px;
+  margin-right: 10px;
 
   ${tabletPro({
-    fontSize: "26px",
+    width: "28px",
     marginTop: "5px",
   })}
 
   ${tablet({
-    fontSize: "22px",
+    width: "26px",
     marginBottom: "3px",
   })}
 
   ${mobile({
-    fontSize: "28px",
+    width: "28px",
     marginBottom: "3px",
   })}
 `;
@@ -107,7 +101,6 @@ const Title = styled.h1`
   font-size: 30px;
   padding: 0;
   margin: 0;
-  color: #fff;
 
   ${tabletPro({
     fontSize: "26px",
@@ -133,7 +126,7 @@ const Hr = styled.hr`
   border: none;
   height: 2px;
   width: 200px;
-  background: #fff;
+  background: #000;
   text-align: left;
   margin-top: 8px;
   margin-left: 0;

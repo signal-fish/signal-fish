@@ -11,12 +11,12 @@ const Buttons = ({
   const pageCount = Math.ceil(portfolios.length / portfoliosPerPage);
 
   const changePage = (currentPageNumber) => {
-    setCurrentPageNumber(currentPageNumber);
+    setCurrentPageNumber(currentPageNumber)
     const firstItem = document.getElementById("firstItem");
     firstItem.scrollIntoView({
       behavior: "smooth",
     });
-  };
+  }
 
   return (
     <Container>
@@ -26,9 +26,7 @@ const Buttons = ({
             currentPageNumber={currentPageNumber}
             selfPageNumber={num}
             key={num}
-            onClick={() => {
-              changePage(num);
-            }}
+            onClick={() => {changePage(num)}}
           >
             {num + 1}
           </Button>
@@ -76,7 +74,8 @@ const Buttons = ({
   );
 };
 
-const Container = styled.div``;
+const Container = styled.div`
+`;
 
 const Button = styled.button`
   cursor: pointer;
@@ -85,15 +84,13 @@ const Button = styled.button`
   font-size: 25px;
   min-height: 50px;
   width: 55px;
-  border: 1px solid #fff;
+  border: 1px solid rgba(0, 0, 0, 0.6);
   border-radius: 5px;
   font-size: 23px;
 
-  color: ${(props) => props.selfPageNumber === props.currentPageNumber ? "#000" : "#fff"};
   background: ${(props) =>
-    props.selfPageNumber === props.currentPageNumber
-      ? "linear-gradient(to bottom right, lightskyblue, lightgreen)"
-      : "transparent"};
+    props.selfPageNumber === props.currentPageNumber ?
+    "linear-gradient(to bottom right, lightskyblue, lightgreen)" : "transparent"};
   box-shadow: ${(props) =>
     props.selfPageNumber === props.currentPageNumber &&
     "1px 1px 3px rgba(0, 0, 0, 0.6)"};
@@ -101,7 +98,6 @@ const Button = styled.button`
     props.selfPageNumber === props.currentPageNumber && "none"};
 
   &:hover {
-    color: ${props => props.selfPageNumber !== props.currentPageNumber && "#000"};
     background: ${(props) =>
       props.selfPageNumber !== props.currentPageNumber &&
       "linear-gradient(to bottom right, lightskyblue, lightgreen)"};

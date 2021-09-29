@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { useTranslation } from "react-i18next";
-import { mobile, tablet, tabletPro, laptop } from "../../responsive";
-import { FaGithub, FaCodepen, FaLinkedin, FaTools } from "react-icons/fa";
+import { mobile, tablet, tabletPro, laptop} from "../../responsive";
 
 const Sidebar = () => {
   const { t } = useTranslation();
@@ -111,18 +110,21 @@ const Sidebar = () => {
                 </Percent>
               </Skill>
               <Skill>
-                <Tooltip>{t("Sidebar.Tooltip.mongodb")}</Tooltip>
+                <Tooltip>{t("Sidebar.Tooltip.express")}</Tooltip>
                 <IconContainer>
-                  <Icon src="assets/icons/skills/mongodb.svg" alt="mongodb" />
+                  <Icon
+                    src="assets/icons/skills/expressjs.svg"
+                    alt="expressjs"
+                  />
                 </IconContainer>
                 <Percent>
-                  <Level width="70%"></Level>
+                  <Level width="60%"></Level>
                 </Percent>
               </Skill>
               <Skill>
-                <Tooltip>{t("Sidebar.Tooltip.express")}</Tooltip>
+                <Tooltip>{t("Sidebar.Tooltip.mongodb")}</Tooltip>
                 <IconContainer>
-                  <Icon src="assets/icons/skills/expressjs.svg" alt="express" />
+                  <Icon src="assets/icons/skills/mongodb.svg" alt="mongodb" />
                 </IconContainer>
                 <Percent>
                   <Level width="70%"></Level>
@@ -170,7 +172,6 @@ const Sidebar = () => {
               <Skill>
                 <Tooltip>{t("Sidebar.Tooltip.mysql")}</Tooltip>
                 <IconContainer>
-                  {/* <GrMysql /> */}
                   <Icon src="assets/icons/skills/mysql.svg" alt="mysql" />
                 </IconContainer>
                 <Percent>
@@ -259,7 +260,6 @@ const Container = styled.div`
   ${mobile({
     flex: "none",
   })}
-  color: #fff;
 `;
 
 const Wrapper = styled.div`
@@ -312,6 +312,7 @@ const Name = styled.h1`
   font-family: "poppins", sans-serif;
   font-family: "Noto Sans SC", sans-serif;
   letter-spacing: 3px;
+
   ${tabletPro({
     fontSize: "25px",
   })};
@@ -351,15 +352,18 @@ const Info = styled.div`
   flex-direction: column;
   overflow-x: hidden;
   overflow-y: scroll;
-
+  
   ::-webkit-scrollbar {
     width: 10px;
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #000;
+    background: rgba(0, 0, 0, 0.5);
   }
 
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
   ${tabletPro({
     flex: "15",
   })}
@@ -385,6 +389,7 @@ const Social = styled.div`
 const SocialIcon = styled.img`
   width: 22px;
   height: 22px;
+
   ${tabletPro({
     width: "20px",
     height: "20px",
@@ -415,8 +420,6 @@ const Icon = styled.img`
   width: 18px;
   height: 18px;
   padding-top: 5px;
-
-  color: #fff;
 `;
 
 const LanguageIcon = styled.img`
@@ -662,7 +665,7 @@ const EmailContainer = styled.div`
 `;
 
 const Email = styled.a`
-  color: #000;
+  color: rgba(0, 0, 0, 0.5);
   font-size: 25px;
   cursor: pointer;
   text-decoration: none;

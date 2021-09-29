@@ -165,26 +165,23 @@ const Wrapper = styled.div`
 `;
 
 const FirstButton = styled.button`
-  border: 1px solid #fff;
   cursor: pointer;
   padding: 8px 20px;
   font-size: 25px;
   margin: 0 10px;
   min-height: 50px;
   width: 120px;
+  border: 1px solid rgba(0, 0, 0, 0.6);
   border-radius: 5px;
   font-size: 23px;
 
   cursor: ${(props) => props.currentPageNumber === 0 && "not-allowed"};
   background-color: ${(props) =>
     props.currentPageNumber === 0 ? "lightgray" : "transparent"};
-  color: ${(props) => props.currentPageNumber === 0 ? "rgba(0, 0, 0, 0.3)" : "#fff"};
+  color: ${(props) => props.currentPageNumber === 0 && "rgba(0, 0, 0, 0.3)"};
   border: ${(props) => props.currentPageNumber === 0 && "lightgray"};
 
   &:hover {
-    color: ${(props) =>
-      props.currentPageNumber !== 0 &&
-      "#000"};
     background: ${(props) =>
       props.currentPageNumber !== 0 &&
       "linear-gradient(to bottom right, lightskyblue, lightgreen)"};
@@ -228,24 +225,22 @@ const FirstButton = styled.button`
 `;
 
 const PrevButton = styled.button`
-  border: 1px solid #fff;
   cursor: pointer;
   padding: 8px 20px;
   font-size: 25px;
   margin: 0 10px;
   min-height: 50px;
   width: 120px;
+  border: 1px solid rgba(0, 0, 0, 0.6);
   border-radius: 5px;
 
   cursor: ${(props) => props.currentPageNumber === 0 && "not-allowed"};
   background-color: ${(props) =>
     props.currentPageNumber === 0 ? "lightgray" : "transparent"};
-  color: ${(props) =>
-    props.currentPageNumber === 0 ? "rgba(0, 0, 0, 0.3)" : "#fff"};
+  color: ${(props) => props.currentPageNumber === 0 && "rgba(0, 0, 0, 0.3)"};
   border: ${(props) => props.currentPageNumber === 0 && "lightgray"};
 
   &:hover {
-    color: ${(props) => props.currentPageNumber !== 0 && "#000"};
     background: ${(props) =>
       props.currentPageNumber !== 0 &&
       "linear-gradient(to bottom right, lightskyblue, lightgreen)"};
@@ -288,13 +283,13 @@ const PrevButton = styled.button`
 `;
 
 const NextButton = styled.button`
-  border: 1px solid #fff;
   cursor: pointer;
   padding: 8px 20px;
   font-size: 25px;
   margin: 0 10px;
   min-height: 50px;
   width: 120px;
+  border: 1px solid rgba(0, 0, 0, 0.6);
   border-radius: 5px;
   font-size: 23px;
 
@@ -311,19 +306,14 @@ const NextButton = styled.button`
   color: ${(props) =>
     props.pageCount === 0
       ? "rgba(0, 0, 0, 0.3)"
-      : props.currentPageNumber === props.pageCount - 1
-      ? "rgba(0, 0, 0, 0.3)"
-      : "#fff"};
+      : props.currentPageNumber === props.pageCount - 1 &&
+        "rgba(0, 0, 0, 0.3)"};
   border: ${(props) =>
     props.pageCount === 0
       ? "lightgray"
       : props.currentPageNumber === props.pageCount - 1 && "lightgray"};
 
   &:hover {
-    color: ${(props) =>
-      props.pageCount !== 0 &&
-      props.currentPageNumber !== props.pageCount - 1 &&
-      "#000"};
     background: ${(props) =>
       props.pageCount !== 0 &&
       props.currentPageNumber !== props.pageCount - 1 &&
@@ -372,13 +362,13 @@ const NextButton = styled.button`
 `;
 
 const LastButton = styled.button`
-  border: 1px solid #fff;
   cursor: pointer;
   padding: 8px 20px;
   font-size: 25px;
   margin: 0 10px;
   min-height: 50px;
   width: 120px;
+  border: 1px solid rgba(0, 0, 0, 0.6);
   border-radius: 5px;
   font-size: 23px;
 
@@ -395,16 +385,14 @@ const LastButton = styled.button`
   color: ${(props) =>
     props.pageCount === 0
       ? "rgba(0, 0, 0, 0.3)"
-      : props.currentPageNumber === props.pageCount - 1 ?
-        "rgba(0, 0, 0, 0.3)" : "#fff"};
+      : props.currentPageNumber === props.pageCount - 1 &&
+        "rgba(0, 0, 0, 0.3)"};
   border: ${(props) =>
     props.pageCount === 0
       ? "lightgray"
       : props.currentPageNumber === props.pageCount - 1 && "lightgray"};
 
   &:hover {
-    color: ${props => props.pageCount !== 0 &&
-      props.currentPageNumber !== props.pageCount - 1 && "#000"};
     background: ${(props) =>
       props.pageCount !== 0 &&
       props.currentPageNumber !== props.pageCount - 1 &&

@@ -63,7 +63,6 @@ const Button = styled.div`
   letter-spacing: 1px;
   padding: 10px 20px;
   border-radius: 5px;
-  color: ${(props) => (props.self === props.currentCategory ? "#000" : "#fff")};
 
   background: ${(props) =>
     props.self === props.currentCategory &&
@@ -72,9 +71,6 @@ const Button = styled.div`
     props.self === props.currentCategory && "1px 1px 3px rgba(0, 0, 0, 0.8)"};
 
   &:hover {
-    color: ${(props) =>
-      props.self !== props.currentCategory && "#000"};
-
     background: ${(props) =>
       props.self !== props.currentCategory &&
       "linear-gradient(to bottom right, lightskyblue, lightgreen)"};

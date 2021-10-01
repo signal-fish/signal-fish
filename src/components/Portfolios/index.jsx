@@ -157,7 +157,7 @@ const Portfolio = styled.div`
 `;
 
 const Title = styled.h2`
-  color: lightskyblue;
+  color: #3f3ffc;
   font-size: 30px;
   margin: 15px 0;
   padding-bottom: 5px;

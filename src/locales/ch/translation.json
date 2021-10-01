@@ -45,7 +45,8 @@
         "shopping list": "购物清单",
         "sidebar and modal": "Sidebar And Modal",
         "navbar": "Navbar",
-        "stripe": "Stripe"
+        "stripe": "Stripe",
+        "cart": "购物车"
       }
     },
     "Pagination": {

@@ -46,7 +46,8 @@
         "sidebar and modal": "Sidebar And Modal",
         "navbar": "Navbar",
         "stripe": "Stripe",
-        "cart": "购物车"
+        "cart": "购物车",
+        "cocktails": "鸡尾酒"
       }
     },
     "Pagination": {

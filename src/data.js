@@ -159,6 +159,14 @@ const portfolios = [
     webLink: "https://signal-fish.gitee.io/cart/",
     sourceLink: "https://github.com/signal-fish/cart",
   },
+  {
+    id: 21,
+    title: "cocktails",
+    category: "react",
+    image: "assets/portfolio/react/cocktails.png",
+    webLink: "https://signal-fish.gitee.io/cocktails/",
+    sourceLink: "https://github.com/signal-fish/cocktails",
+  },
 ];
 
 export default portfolios;

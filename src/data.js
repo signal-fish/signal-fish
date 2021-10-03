@@ -167,6 +167,22 @@ const portfolios = [
     webLink: "https://signal-fish.gitee.io/cocktails/",
     sourceLink: "https://github.com/signal-fish/cocktails",
   },
+  {
+    id: 22,
+    title: "markdown preview",
+    category: "react",
+    image: "assets/portfolio/react/markdown-preview.png",
+    webLink: "https://signal-fish.gitee.io/markdown-preview/",
+    sourceLink: "https://github.com/signal-fish/markdown-preview",
+  },
+  {
+    id: 23,
+    title: "dark mode",
+    category: "react",
+    image: "assets/portfolio/react/dark-mode.png",
+    webLink: "https://signal-fish.gitee.io/dark-mode/",
+    sourceLink: "https://github.com/signal-fish/dark-mode",
+  },
 ];
 
 export default portfolios;

@@ -47,7 +47,9 @@
         "navbar": "Navbar",
         "stripe": "Stripe",
         "cart": "购物车",
-        "cocktails": "鸡尾酒"
+        "cocktails": "鸡尾酒",
+        "markdown preview": "Markdown预览",
+        "dark mode": "夜间模式"
       }
     },
     "Pagination": {

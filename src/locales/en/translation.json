@@ -50,7 +50,9 @@
         "navbar": "Navbar",
         "stripe": "Stripe",
         "cart": "Cart",
-        "cocktails": "Cocktails"
+        "cocktails": "Cocktails",
+        "markdown preview": "Markdown Preview",
+        "dark mode": "Dark Mode"
       }
     },
 

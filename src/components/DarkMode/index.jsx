@@ -6,10 +6,10 @@ const DarkMode = ({ theme, themeToggler }) => {
     <Container>
       <Wrapper onClick={themeToggler}>
         <Left>
-          <FaSun />
+          <FaMoon />
         </Left>
         <Right>
-          <FaMoon />
+          <FaSun />
         </Right>
         <Circle currentTheme={theme}></Circle>
       </Wrapper>
@@ -42,13 +42,13 @@ const Wrapper = styled.div`
 
 const Left = styled.div`
   color: ${(props) => props.theme.darkModeIconColor};
-  font-size: 16px;
+  font-size: 14px;
   margin-top: 3px;
 `;
 
 const Right = styled.div`
   color: ${(props) => props.theme.darkModeIconColor};
-  font-size: 14px;
+  font-size: 16px;
   margin-top: 3px;
 `;
 

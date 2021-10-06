@@ -2,14 +2,15 @@ import styled from "styled-components";
 import { mobile, tablet, tabletPro, laptop, laptopPro } from "../../responsive";
 
 const Categories = ({ categories, setCurrentCategory, currentCategory }) => {
-  
   const changeCategory = (category, currentCategory) => {
-    if ((category !== currentCategory)) {
+    if (category !== currentCategory) {
       setCurrentCategory(category);
       const firstItem = document.getElementById("firstItem");
-      firstItem.scrollIntoView({
-        behavior: "smooth",
-      });
+      if (firstItem) {
+        firstItem.scrollIntoView({
+          behavior: "smooth",
+        });
+      }
     }
   };
 
@@ -63,7 +64,10 @@ const Button = styled.div`
   letter-spacing: 1px;
   padding: 10px 20px;
   border-radius: 5px;
-  color: ${(props) => (props.self === props.currentCategory ? "#000" : "#fff")};
+  color: ${(props) =>
+    props.self === props.currentCategory
+      ? props.theme.activeBtnColor
+      : props.theme.btnColor};
 
   background: ${(props) =>
     props.self === props.currentCategory &&
@@ -73,7 +77,7 @@ const Button = styled.div`
 
   &:hover {
     color: ${(props) =>
-      props.self !== props.currentCategory && "#000"};
+      props.self !== props.currentCategory && props.theme.activeBtnColor};
 
     background: ${(props) =>
       props.self !== props.currentCategory &&

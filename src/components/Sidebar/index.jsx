@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import { useTranslation } from "react-i18next";
 import { mobile, tablet, tabletPro, laptop } from "../../responsive";
-import { FaGithub, FaCodepen, FaLinkedin, FaTools } from "react-icons/fa";
+import { socials, skills, languages } from "../../sidebar-data";
+import { FaTools, FaLanguage } from "react-icons/fa";
 
-const Sidebar = () => {
+const Sidebar = ({ theme }) => {
   const { t } = useTranslation();
   return (
     <Container>
@@ -13,230 +14,72 @@ const Sidebar = () => {
           <Name>{t("Sidebar.Name")}</Name>
           <JobTitle>{t("Sidebar.JobTitle")}</JobTitle>
           <Social>
-            <Link
-              href="https://github.com/signal-fish"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              <SocialIcon src="assets/icons/social/github.svg" alt="github" />
-            </Link>
-            <Link
-              href="https://codepen.io/signal_fish/pens/public"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              <SocialIcon src="assets/icons/social/codepen.svg" alt="codepen" />
-            </Link>
-            <Link
-              href="https://www.linkedin.com/in/signal-fish-552aaa211/"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              <SocialIcon
-                src="assets/icons/social/linkedin.svg"
-                alt="linkedin"
-              />
-            </Link>
-            {/* <Link
-              href="https://twitter.com/fish_signal"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              <SocialIcon src="assets/icons/social/twitter.svg" alt="twitter" />
-            </Link> */}
+            {socials.map((social) => {
+              const { id, icon, link, lightColor, darkColor } = social;
+              return (
+                <LinkWrapper key={id}>
+                  <Link color={theme === 'light' ? lightColor : darkColor} href={link} target="_blank" rel="noreferrer noopener">
+                    {icon}
+                  </Link>
+                </LinkWrapper>
+              );
+            })}
           </Social>
         </Profile>
+
         <Info>
           {/* Skills */}
           <SkillsContainer>
             <TitleContainer>
               <IconContainer>
-                <TitleIcon src="assets/icons/skills/tools.svg" alt="skills" />
+                <ToolsIcon>
+                  <FaTools />
+                </ToolsIcon>
               </IconContainer>
               <TitleText>{t("Sidebar.SkillTitle")}</TitleText>
             </TitleContainer>
             <Skills>
-              <Skill>
-                <Tooltip>{t("Sidebar.Tooltip.html5")}</Tooltip>
-                <IconContainer>
-                  <SpecialIcon
-                    src="assets/icons/skills/html5.svg"
-                    alt="html 5"
-                  />
-                </IconContainer>
-                <Percent>
-                  <Level width="85%"></Level>
-                </Percent>
-              </Skill>
-              <Skill>
-                <Tooltip>{t("Sidebar.Tooltip.css3")}</Tooltip>
-                <IconContainer>
-                  <SpecialIcon src="assets/icons/skills/css3.svg" alt="css 3" />
-                </IconContainer>
-                <Percent>
-                  <Level width="85%"></Level>
-                </Percent>
-              </Skill>
-              <Skill>
-                <Tooltip>{t("Sidebar.Tooltip.javascript")}</Tooltip>
-                <IconContainer>
-                  <SpecialIcon
-                    src="assets/icons/skills/javascript.svg"
-                    alt="javascript"
-                  />
-                </IconContainer>
-                <Percent>
-                  <Level width="80%"></Level>
-                </Percent>
-              </Skill>
-              <Skill>
-                <Tooltip>{t("Sidebar.Tooltip.react")}</Tooltip>
-                <IconContainer>
-                  <SpecialIcon
-                    src="assets/icons/skills/react.svg"
-                    alt="react"
-                  />
-                </IconContainer>
-                <Percent>
-                  <Level width="80%"></Level>
-                </Percent>
-              </Skill>
-              <Skill>
-                <Tooltip>{t("Sidebar.Tooltip.nodejs")}</Tooltip>
-                <IconContainer>
-                  <Icon src="assets/icons/skills/nodejs.svg" alt="node.js" />
-                </IconContainer>
-                <Percent>
-                  <Level width="65%"></Level>
-                </Percent>
-              </Skill>
-              <Skill>
-                <Tooltip>{t("Sidebar.Tooltip.mongodb")}</Tooltip>
-                <IconContainer>
-                  <Icon src="assets/icons/skills/mongodb.svg" alt="mongodb" />
-                </IconContainer>
-                <Percent>
-                  <Level width="70%"></Level>
-                </Percent>
-              </Skill>
-              <Skill>
-                <Tooltip>{t("Sidebar.Tooltip.express")}</Tooltip>
-                <IconContainer>
-                  <Icon src="assets/icons/skills/expressjs.svg" alt="express" />
-                </IconContainer>
-                <Percent>
-                  <Level width="70%"></Level>
-                </Percent>
-              </Skill>
-              <Skill>
-                <Tooltip>{t("Sidebar.Tooltip.bootstrap")}</Tooltip>
-                <IconContainer>
-                  <Icon
-                    src="assets/icons/skills/bootstrap.svg"
-                    alt="bootstrap"
-                  />
-                </IconContainer>
-                <Percent>
-                  <Level width="70%"></Level>
-                </Percent>
-              </Skill>
-              <Skill>
-                <Tooltip>{t("Sidebar.Tooltip.jquery")}</Tooltip>
-                <IconContainer>
-                  <Icon src="assets/icons/skills/jquery.svg" alt="jquery" />
-                </IconContainer>
-                <Percent>
-                  <Level width="80%"></Level>
-                </Percent>
-              </Skill>
-              <Skill>
-                <Tooltip>{t("Sidebar.Tooltip.webpack")}</Tooltip>
-                <IconContainer>
-                  <Icon src="assets/icons/skills/webpack.svg" alt="webpack" />
-                </IconContainer>
-                <Percent>
-                  <Level width="70%"></Level>
-                </Percent>
-              </Skill>
-              <Skill>
-                <Tooltip>{t("Sidebar.Tooltip.git")}</Tooltip>
-                <IconContainer>
-                  <Icon src="assets/icons/skills/git.svg" alt="git" />
-                </IconContainer>
-                <Percent>
-                  <Level width="70%"></Level>
-                </Percent>
-              </Skill>
-              <Skill>
-                <Tooltip>{t("Sidebar.Tooltip.mysql")}</Tooltip>
-                <IconContainer>
-                  {/* <GrMysql /> */}
-                  <Icon src="assets/icons/skills/mysql.svg" alt="mysql" />
-                </IconContainer>
-                <Percent>
-                  <Level width="60%"></Level>
-                </Percent>
-              </Skill>
-              <Skill>
-                <Tooltip>{t("Sidebar.Tooltip.python")}</Tooltip>
-                <IconContainer>
-                  <Icon src="assets/icons/skills/python.svg" alt="python" />
-                </IconContainer>
-                <Percent>
-                  <Level width="70%"></Level>
-                </Percent>
-              </Skill>
-              <Skill>
-                <Tooltip>{t("Sidebar.Tooltip.linux")}</Tooltip>
-                <IconContainer>
-                  <Icon src="assets/icons/skills/linux.svg" alt="linux" />
-                </IconContainer>
-                <Percent>
-                  <Level width="60%"></Level>
-                </Percent>
-              </Skill>
+              {skills.map((skill) => {
+                const { id, name, icon, level, lightColor, darkColor } = skill;
+                return (
+                  <Skill key={id}>
+                    <Tooltip>{name}</Tooltip>
+                    <IconContainer
+                      color={theme === "light" ? lightColor : darkColor}
+                    >
+                      {icon}
+                    </IconContainer>
+                    <Percent>
+                      <Level width={level}></Level>
+                    </Percent>
+                  </Skill>
+                );
+              })}
             </Skills>
           </SkillsContainer>
 
           {/* Languages */}
           <LanguagesContainer>
             <TitleContainer>
-              <IconContainer>
-                <LanguageIcon
-                  src="assets/icons/languages/languages.svg"
-                  alt="languages"
-                />
-              </IconContainer>
+              <LanguageTitleIcon>
+                <FaLanguage />
+              </LanguageTitleIcon>
               <TitleText>{t("Sidebar.LanguageTitle")}</TitleText>
             </TitleContainer>
             <Languages>
-              <Language>
-                <IconContainer>
-                  <Icon src="assets/icons/languages/china.svg" alt="chinese" />
-                </IconContainer>
-                <Percent>
-                  <Level width="90%"></Level>
-                </Percent>
-              </Language>
-              <Language>
-                <IconContainer>
-                  <Icon
-                    src="assets/icons/languages/america.svg"
-                    alt="english"
-                  />
-                </IconContainer>
-                <Percent>
-                  <Level width="70%"></Level>
-                </Percent>
-              </Language>
-              <Language>
-                <IconContainer>
-                  <Icon src="assets/icons/languages/japan.svg" alt="japanese" />
-                </IconContainer>
-                <Percent>
-                  <Level width="30%"></Level>
-                </Percent>
-              </Language>
+              {languages.map((language) => {
+                const { id, name, icon, level } = language;
+                return (
+                  <Language key={id}>
+                    <LanguageIcon>
+                      <Icon src={icon} alt={name} />
+                    </LanguageIcon>
+                    <Percent>
+                      <Level width={level}></Level>
+                    </Percent>
+                  </Language>
+                );
+              })}
             </Languages>
           </LanguagesContainer>
         </Info>
@@ -255,11 +98,12 @@ const Container = styled.div`
   height: auto;
   flex: 1.6;
   display: flex;
+  transition: 0.6s;
+  background: ${(props) => props.theme.body};
 
   ${mobile({
     flex: "none",
   })}
-  color: #fff;
 `;
 
 const Wrapper = styled.div`
@@ -278,7 +122,7 @@ const Profile = styled.div`
 
   ${tabletPro({
     flex: "3.5",
-  })}
+  })};
 `;
 
 const Image = styled.img`
@@ -312,6 +156,8 @@ const Name = styled.h1`
   font-family: "poppins", sans-serif;
   font-family: "Noto Sans SC", sans-serif;
   letter-spacing: 3px;
+  color: ${(props) => props.theme.fontColor};
+
   ${tabletPro({
     fontSize: "25px",
   })};
@@ -332,6 +178,7 @@ const JobTitle = styled.h1`
   font-family: "Noto Sans SC", sans-serif;
   letter-spacing: 1px;
   margin-top: 0;
+  color: ${(props) => props.theme.fontColor};
 
   ${tabletPro({
     fontSize: "20px",
@@ -357,7 +204,7 @@ const Info = styled.div`
   }
 
   ::-webkit-scrollbar-thumb {
-    background: #000;
+    background: ${(props) => props.theme.scrollBarColor};
   }
 
   ${tabletPro({
@@ -382,28 +229,14 @@ const Social = styled.div`
   })}
 `;
 
-const SocialIcon = styled.img`
-  width: 22px;
-  height: 22px;
-  ${tabletPro({
-    width: "20px",
-    height: "20px",
-  })};
-
-  ${tablet({
-    width: "18px",
-    height: "18px",
-  })};
-
-  ${mobile({
-    width: "25px",
-    height: "25px",
-  })};
+const LinkWrapper = styled.div`
+  font-size: 22px;
 `;
 
 const Link = styled.a`
   text-decoration: none;
   cursor: pointer;
+  color: ${props => props.color};
 
   &:hover {
     opacity: 0.6;
@@ -411,34 +244,25 @@ const Link = styled.a`
 `;
 
 const Icon = styled.img`
-  flex: 1;
-  width: 18px;
-  height: 18px;
-  padding-top: 5px;
-
-  color: #fff;
+  width: 20px;
 `;
 
-const LanguageIcon = styled.img`
-  flex: 1;
-  width: 21px;
-  height: 21px;
-  padding-top: 8px;
-
-  ${tabletPro({
-    width: "19px",
-    height: "19px",
-  })}
-
-  ${tablet({
-    width: "17px",
-    height: "17px",
-  })}
+const LanguageIcon = styled.div`
+  flex: 1.3;
+  display: flex;
+  align-items: center;
+  margin-right: 7px;
 
   ${mobile({
-    width: "22px",
-    height: "22px",
+    flex: 0.8,
   })}
+`;
+
+const ToolsIcon = styled.div`
+  font-size: 19px;
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
 `;
 
 const SkillsContainer = styled.div`
@@ -463,34 +287,12 @@ const TitleContainer = styled.div`
   align-items: center;
 `;
 
-const TitleIcon = styled.img`
-  flex: 1;
-  width: 18px;
-  height: 18px;
-  padding-top: 7px;
-  padding-left: 3px;
-
-  ${tabletPro({
-    width: "17px",
-    height: "17px",
-  })}
-
-  ${tablet({
-    width: "16px",
-    height: "16px",
-  })}
-
-  ${mobile({
-    width: "20px",
-    height: "20px",
-  })}
-`;
-
 const TitleText = styled.h1`
   flex: 25;
   font-size: 20px;
   font-weight: 500;
   font-family: "Noto Sans SC", sans-serif;
+  color: ${(props) => props.theme.fontColor};
 
   ${tabletPro({
     fontSize: "18px",
@@ -538,24 +340,18 @@ const Tooltip = styled.span`
   z-index: 999;
   font-size: 12px;
   transition: 1s;
+  color: ${(props) => props.theme.fontColor};
+  letter-spacing: px;
 
   ${tabletPro({
     fontSize: "10px",
   })}
-
   ${tablet({
     fontSize: "8px",
   })}
-
-  ${mobile({
+    ${mobile({
     fontSize: "12px",
-  })}
-`;
-
-const SpecialIcon = styled.img`
-  width: 21px;
-  height: 21px;
-  padding-top: 5px;
+  })};
 `;
 
 const LanguagesContainer = styled.div`
@@ -572,6 +368,15 @@ const LanguagesContainer = styled.div`
   ${mobile({
     margin: "10px 10% 0 10%",
   })}
+`;
+
+const LanguageTitleIcon = styled.div`
+  font-size: 36px;
+  display: flex;
+  align-items: center;
+  margin-right: 6px;
+  margin-top: 3px;
+  color: ${(props) => props.theme.fontColor};
 `;
 
 const Languages = styled.ul`
@@ -591,7 +396,7 @@ const Language = styled.li`
   width: 47%;
   display: flex;
   align-items: center;
-  margin-bottom: 5px;
+  margin: 10px 5px 5px 0;
 
   ${tabletPro({
     width: "100%",
@@ -600,8 +405,15 @@ const Language = styled.li`
 
 const IconContainer = styled.span`
   flex: 1.3;
-  margin-right: 5px;
+  margin: 5px 5px 5px 0;
   font-size: 20px;
+  color: ${(props) => props.theme.fontColor};
+  display: flex;
+  align-items: center;
+  color: ${(props) => props.color};
+  ${mobile({
+    flex: 0.8,
+  })}
 `;
 
 const Percent = styled.span`
@@ -609,7 +421,7 @@ const Percent = styled.span`
   position: relative;
   width: 100%;
   height: 6px;
-  background-color: lightblue;
+  background-color: ${(props) => props.theme.percentBgColor};
   display: block;
   border-radius: 3px;
 `;
@@ -619,7 +431,7 @@ const Level = styled.div`
   top: 0;
   left: 0;
   height: 100%;
-  background: linear-gradient(to bottom right, lightgreen, #3333cc);
+  background: ${(props) => props.theme.levelBgColor};
   width: ${(props) => props.width};
   border-radius: 3px 0 0 3px;
 `;

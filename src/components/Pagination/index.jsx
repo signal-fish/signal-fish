@@ -145,7 +145,6 @@ const Container = styled.div`
 
   ${tabletPro({
     marginBottom: "50px",
-    // marginLeft: "-20px",
   })}
 
   ${mobile({
@@ -165,7 +164,7 @@ const Wrapper = styled.div`
 `;
 
 const FirstButton = styled.button`
-  border: 1px solid #fff;
+  border: 1px solid ${(props) => props.theme.borderColor};
   cursor: pointer;
   padding: 8px 20px;
   font-size: 25px;
@@ -178,13 +177,12 @@ const FirstButton = styled.button`
   cursor: ${(props) => props.currentPageNumber === 0 && "not-allowed"};
   background-color: ${(props) =>
     props.currentPageNumber === 0 ? "lightgray" : "transparent"};
-  color: ${(props) => props.currentPageNumber === 0 ? "rgba(0, 0, 0, 0.3)" : "#fff"};
+  color: ${(props) =>
+    props.currentPageNumber === 0 ? "rgba(0, 0, 0, 0.3)" : props.theme.btnColor};
   border: ${(props) => props.currentPageNumber === 0 && "lightgray"};
 
   &:hover {
-    color: ${(props) =>
-      props.currentPageNumber !== 0 &&
-      "#000"};
+    color: ${(props) => props.currentPageNumber !== 0 && "#000"};
     background: ${(props) =>
       props.currentPageNumber !== 0 &&
       "linear-gradient(to bottom right, lightskyblue, lightgreen)"};
@@ -222,13 +220,13 @@ const FirstButton = styled.button`
   ${mobile({
     fontSize: "20px",
     padding: "10px 20px",
-    width: "125px",
+    width: "115px",
     margin: "0 22px",
   })}
 `;
 
 const PrevButton = styled.button`
-  border: 1px solid #fff;
+  border: 1px solid ${(props) => props.theme.borderColor};
   cursor: pointer;
   padding: 8px 20px;
   font-size: 25px;
@@ -241,11 +239,13 @@ const PrevButton = styled.button`
   background-color: ${(props) =>
     props.currentPageNumber === 0 ? "lightgray" : "transparent"};
   color: ${(props) =>
-    props.currentPageNumber === 0 ? "rgba(0, 0, 0, 0.3)" : "#fff"};
+    props.currentPageNumber === 0
+      ? "rgba(0, 0, 0, 0.3)"
+      : props.theme.btnColor};
   border: ${(props) => props.currentPageNumber === 0 && "lightgray"};
 
   &:hover {
-    color: ${(props) => props.currentPageNumber !== 0 && "#000"};
+    color: ${(props) => props.currentPageNumber !== 0 && props.theme.activeBtnColor};
     background: ${(props) =>
       props.currentPageNumber !== 0 &&
       "linear-gradient(to bottom right, lightskyblue, lightgreen)"};
@@ -282,13 +282,13 @@ const PrevButton = styled.button`
   ${mobile({
     fontSize: "20px",
     padding: "10px 20px",
-    width: "125px",
+    width: "115px",
     margin: "0 22px",
   })}
 `;
 
 const NextButton = styled.button`
-  border: 1px solid #fff;
+  border: 1px solid ${props => props.theme.borderColor};
   cursor: pointer;
   padding: 8px 20px;
   font-size: 25px;
@@ -313,7 +313,7 @@ const NextButton = styled.button`
       ? "rgba(0, 0, 0, 0.3)"
       : props.currentPageNumber === props.pageCount - 1
       ? "rgba(0, 0, 0, 0.3)"
-      : "#fff"};
+      : props.theme.btnColor};
   border: ${(props) =>
     props.pageCount === 0
       ? "lightgray"
@@ -323,7 +323,7 @@ const NextButton = styled.button`
     color: ${(props) =>
       props.pageCount !== 0 &&
       props.currentPageNumber !== props.pageCount - 1 &&
-      "#000"};
+      props.theme.activeBtnColor};
     background: ${(props) =>
       props.pageCount !== 0 &&
       props.currentPageNumber !== props.pageCount - 1 &&
@@ -366,13 +366,13 @@ const NextButton = styled.button`
   ${mobile({
     fontSize: "20px",
     padding: "10px 20px",
-    width: "125px",
+    width: "115px",
     margin: "0 22px",
   })}
 `;
 
 const LastButton = styled.button`
-  border: 1px solid #fff;
+  border: 1px solid ${props => props.theme.borderColor};
   cursor: pointer;
   padding: 8px 20px;
   font-size: 25px;
@@ -396,7 +396,7 @@ const LastButton = styled.button`
     props.pageCount === 0
       ? "rgba(0, 0, 0, 0.3)"
       : props.currentPageNumber === props.pageCount - 1 ?
-        "rgba(0, 0, 0, 0.3)" : "#fff"};
+        "rgba(0, 0, 0, 0.3)" : props.theme.btnColor};
   border: ${(props) =>
     props.pageCount === 0
       ? "lightgray"
@@ -404,7 +404,7 @@ const LastButton = styled.button`
 
   &:hover {
     color: ${props => props.pageCount !== 0 &&
-      props.currentPageNumber !== props.pageCount - 1 && "#000"};
+      props.currentPageNumber !== props.pageCount - 1 && props.theme.activeBtnColor};
     background: ${(props) =>
       props.pageCount !== 0 &&
       props.currentPageNumber !== props.pageCount - 1 &&
@@ -447,7 +447,7 @@ const LastButton = styled.button`
   ${mobile({
     fontSize: "20px",
     padding: "10px 20px",
-    width: "125px",
+    width: "115px",
     margin: "0 22px",
   })}
 `;

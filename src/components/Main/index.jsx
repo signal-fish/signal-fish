@@ -16,7 +16,7 @@ const Main = ({
   portfoliosPerPage,
   pageCount,
   generateArray,
-  scrollItem,
+  setSearchTerm,
 }) => {
   const { t } = useTranslation();
 
@@ -31,6 +31,12 @@ const Main = ({
       <HrWrapper>
         <Hr></Hr>
       </HrWrapper>
+      <SearchForm>
+        <Input
+          placeholder={t("Main.SearchFormPlaceholder")}
+          onChange={(event) => setSearchTerm(event.target.value)}
+        ></Input>
+      </SearchForm>
       <Categories
         categories={categories}
         currentCategory={currentCategory}
@@ -59,7 +65,9 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
+  transition: 0.6s;
 
+  background: ${(props) => props.theme.body};
   ${mobile({
     flex: "none",
   })}
@@ -79,24 +87,24 @@ const ProjectWrapper = styled.div`
 `;
 
 const ProjectIcon = styled.div`
-  color: white;
-  font-size: 28px;
+  color: ${(props) => props.theme.fontColor};
+  font-size: 32px;
   display: flex;
   align-items: center;
   margin-right: 5px;
+  transition: .6s;
 
   ${tabletPro({
-    fontSize: "26px",
+    fontSize: "28px",
     marginTop: "5px",
   })}
 
   ${tablet({
-    fontSize: "22px",
     marginBottom: "3px",
   })}
 
   ${mobile({
-    fontSize: "28px",
+    fontSize: "30px",
     marginBottom: "3px",
   })}
 `;
@@ -107,7 +115,8 @@ const Title = styled.h1`
   font-size: 30px;
   padding: 0;
   margin: 0;
-  color: #fff;
+  color: ${(props) => props.theme.fontColor};
+  transition: 0.6s;
 
   ${tabletPro({
     fontSize: "26px",
@@ -133,10 +142,11 @@ const Hr = styled.hr`
   border: none;
   height: 2px;
   width: 200px;
-  background: #fff;
+  background: ${(props) => props.theme.fontColor};
   text-align: left;
   margin-top: 8px;
   margin-left: 0;
+  transition: 0.6s;
 
   ${tabletPro({
     width: "165px",
@@ -152,4 +162,26 @@ const Hr = styled.hr`
   })}
 `;
 
+const SearchForm = styled.div`
+  margin: 35px 0 -5px 20px;
+
+  ${mobile({
+    margin: "25px 20px 0 20px",
+  })}
+`;
+
+const Input = styled.input`
+height: 50px;
+width: calc(100% - 23px);
+padding: 0 10px;
+font-size: 22px;
+border: none;
+background: ${props => props.theme.searchFormBg};
+color: ${props => props.theme.searchFormTextColor};
+
+${mobile({
+height: "40px",
+fontSize: "20px",
+})}
+`
 export default Main;

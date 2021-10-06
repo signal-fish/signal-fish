@@ -2,7 +2,7 @@
   "Sidebar": {
     "Name": "余幸浩",
     "JobTitle": "前端工程师",
-    "SkillTitle": "个人技能",
+    "SkillTitle": "技能",
     "Tooltip": {
       "html5": "HTML 5",
       "css3": "CSS 3",
@@ -25,6 +25,7 @@
 
   "Main": {
     "ProjectName": "项目",
+    "SearchFormPlaceholder": "搜索项目...",
     "Portfolios": {
       "title": {
         "movie website": "电影网页",

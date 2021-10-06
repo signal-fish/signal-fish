@@ -27,7 +27,7 @@
 
   "Main": {
     "ProjectName": "Projects",
-
+    "SearchFormPlaceholder": "Search projects...",
     "Portfolios": {
       "title": {
         "movie website": "Movie Website",

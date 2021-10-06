@@ -3,6 +3,7 @@ import styled from "styled-components";
 import i18next from "i18next";
 import { useTranslation } from "react-i18next";
 import { GoChevronDown } from "react-icons/go";
+import {AiOutlineGlobal} from 'react-icons/ai'
 
 const Languages = () => {
   const { t } = useTranslation();
@@ -15,10 +16,13 @@ const Languages = () => {
     <Container>
       <Dropdown>
         <Button id="dropdownButton">
-          <Global src="assets/global.svg" alt="global" />
-          <ArrowIcon id="arrow">
+          <LanguageIcon>
+            <AiOutlineGlobal />
+          </LanguageIcon>
+          {/* <Global src="assets/global.svg" alt="global" /> */}
+          <LanguageIcon id="arrow">
             <GoChevronDown />
-          </ArrowIcon>
+          </LanguageIcon>
         </Button>
         <DropdownContent id="dropdownContent">
           <Language className="language" onClick={() => handleChange("en")}>
@@ -54,15 +58,16 @@ const Button = styled.button`
   width: 100%;
   height: 30px;
   right: 0;
-  padding: 5px;
+  padding: 0;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   cursor: pointer;
   border: none;
   background: transparent;
+
   &:hover {
-    background: #541d36;
+    opacity: 0.6;
   }
 `;
 
@@ -73,7 +78,6 @@ const DropdownContent = styled.div`
 
 const Language = styled.button`
   padding: 5px;
-  color: #fff;
   background: transparent;
   border: none;
   display: flex;
@@ -81,23 +85,19 @@ const Language = styled.button`
   cursor: pointer;
   font-family: "poppins", sans-serif;
   font-family: "Noto Sans SC", sans-serif;
-  color: #fff;
+  color: ${(props) => props.theme.fontColor};
+  transition: 0.3s;
+  min-width: 100px;
 
   &:hover {
-    transition: 0.2s;
     transform: scale(1.1);
-    background: #541d36;
+    background: ${props => props.theme.portfoliosBg};
   }
 `;
 
-const Global = styled.img`
-  padding-right: 8px;
-  width: 22px;
-`;
-
-const ArrowIcon = styled.div`
-  color: #fff;
-  font-size: 26px;
+const LanguageIcon = styled.div`
+  color: ${(props) => props.theme.fontColor};
+  font-size: 23px;
   display: flex;
   align-items: center;
 `;

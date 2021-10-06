@@ -1,41 +1,69 @@
 import { useEffect, useState } from "react";
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
+import DarkMode from "./components/DarkMode";
 import Languages from "./components/Languages";
 import Sidebar from "./components/Sidebar";
 import Main from "./components/Main";
 import data from "./data";
 import i18next from "i18next";
 import { mobile, LargeVersion } from "./responsive";
+import { lightTheme, darkTheme } from "./themes.js";
 
 const allCategories = [
   "All",
   ...new Set(data.map((portfolio) => portfolio.category)),
 ];
 
+const getStorageTheme = () => {
+  let theme = "dark-theme";
+  if (localStorage.getItem("theme")) {
+    theme = localStorage.getItem("theme");
+  }
+  return theme;
+};
+
 const App = () => {
   const [categories] = useState(allCategories);
   const [portfolios, setPortfolios] = useState(data);
   const [currentCategory, setCurrentCategory] = useState("All");
   const [currentPageNumber, setCurrentPageNumber] = useState(0);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [theme, setTheme] = useState(getStorageTheme());
 
   const portfoliosPerPage = 12;
   const pageCount = Math.ceil(portfolios.length / portfoliosPerPage);
 
-  const filterPortfolios = (category) => {
-    if (category === "All") {
-      setPortfolios(data);
-      return;
-    }
-    const newPortfolios = data.filter(
-      (portfolio) => portfolio.category === category
-    );
-    setPortfolios(newPortfolios);
-  };
-
-  // filter portfolios if current portfolios changed
+  // filter portfolios if current portfolios or searchTerm changed
   useEffect(() => {
+    const filterPortfolios = (category) => {
+      if (searchTerm === "") {
+        if (category === "All") {
+          setPortfolios(data);
+          return;
+        }
+        const newPortfolios = data.filter(
+          (portfolio) => portfolio.category === category
+        );
+        setPortfolios(newPortfolios);
+      } else {
+        if (category === "All") {
+          setPortfolios(
+            data.filter((item) =>
+              item.title.toLowerCase().includes(searchTerm.toLowerCase())
+            )
+          );
+          return;
+        }
+        const newPortfolios = data
+          .filter((portfolio) => portfolio.category === category)
+          .filter((item) =>
+            item.title.toLowerCase().includes(searchTerm.toLowerCase())
+          );
+        setPortfolios(newPortfolios);
+      }
+    };
     filterPortfolios(currentCategory);
-  }, [currentCategory]);
+  }, [currentCategory, searchTerm]);
 
   // update currentPageNumber to 0 if portfolios changed
   useEffect(() => {
@@ -54,24 +82,36 @@ const App = () => {
     return arr;
   };
 
+  const themeToggler = () => {
+    theme === "light" ? setTheme("dark") : setTheme("light");
+  };
+
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+  }, [theme]);
+
   return (
-    <Container>
-      <Wrapper>
-        <Languages handleChange={handleChange} />
-        <Sidebar />
-        <Main
-          categories={categories}
-          currentCategory={currentCategory}
-          setCurrentCategory={setCurrentCategory}
-          portfolios={portfolios}
-          currentPageNumber={currentPageNumber}
-          setCurrentPageNumber={setCurrentPageNumber}
-          portfoliosPerPage={portfoliosPerPage}
-          pageCount={pageCount}
-          generateArray={generateArray}
-        />
-      </Wrapper>
-    </Container>
+    <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+      <Container>
+        <Wrapper>
+          <DarkMode theme={theme} themeToggler={themeToggler} />
+          <Languages handleChange={handleChange} />
+          <Sidebar theme={theme} />
+          <Main
+            categories={categories}
+            currentCategory={currentCategory}
+            setCurrentCategory={setCurrentCategory}
+            portfolios={portfolios}
+            currentPageNumber={currentPageNumber}
+            setCurrentPageNumber={setCurrentPageNumber}
+            portfoliosPerPage={portfoliosPerPage}
+            pageCount={pageCount}
+            generateArray={generateArray}
+            setSearchTerm={setSearchTerm}
+          />
+        </Wrapper>
+      </Container>
+    </ThemeProvider>
   );
 };
 
@@ -86,7 +126,7 @@ const Wrapper = styled.div`
   width: 100vw;
   min-height: 600px;
   position: absolute;
-  max-width: 1780px;
+  max-width: 1800px;
   max-height: 1300px;
 
   ${LargeVersion({

@@ -1,11 +1,10 @@
 import styled from "styled-components";
 import { mobile, tablet, tabletPro, laptop, laptopPro } from "../../responsive";
-import { useTranslation } from "react-i18next";
+import { FaGithub, FaLink } from "react-icons/fa";
 
 const Portfolios = ({ portfolios, currentPageNumber, portfoliosPerPage }) => {
   const portfoliosDisplayed = currentPageNumber * portfoliosPerPage;
 
-  const { t } = useTranslation();
   return (
     <Container id="projects">
       {portfolios
@@ -15,29 +14,25 @@ const Portfolios = ({ portfolios, currentPageNumber, portfoliosPerPage }) => {
           return (
             <Wrapper id={i === 0 ? "firstItem" : ""} key={id}>
               <Portfolio image={image}>
-                <Title>{t(`Main.Portfolios.title.${title}`)}</Title>
+                <Title>{title}</Title>
                 <LinkContainer>
                   <Link
                     href={webLink}
                     target="_blank"
                     rel="noreferrer noopener"
                   >
-                    <WebIcon
-                      className="link"
-                      src="assets/link.png"
-                      alt="link icon"
-                    ></WebIcon>
+                    <Icon>
+                      <FaLink />
+                    </Icon>
                   </Link>
                   <Link
                     href={sourceLink}
                     target="_blank"
                     rel="noreferrer noopener"
                   >
-                    <SourceIcon
-                      className="github"
-                      src="assets/github.png"
-                      alt="github icon"
-                    ></SourceIcon>
+                    <Icon>
+                      <FaGithub />
+                    </Icon>
                   </Link>
                 </LinkContainer>
               </Portfolio>
@@ -49,7 +44,7 @@ const Portfolios = ({ portfolios, currentPageNumber, portfoliosPerPage }) => {
 };
 
 const Container = styled.div`
-  background: #541d36;
+  background: ${(props) => props.theme.portfoliosBg};
   flex: 22;
   display: grid;
   grid-template-columns: repeat(3, minmax(100px, 330px));
@@ -59,17 +54,13 @@ const Container = styled.div`
   overflow-x: hidden;
   overflow-y: scroll;
   position: relative;
-
+  transition: 0.6s;
   ::-webkit-scrollbar {
     width: 10px;
   }
 
-  ::-webkit-scrollbar-track {
-    background: #541d36;
-  }
-
   ::-webkit-scrollbar-thumb {
-    background: #000;
+    background: ${(props) => props.theme.scrollBarColor};
   }
 
   ${laptopPro({
@@ -88,8 +79,8 @@ const Container = styled.div`
     flexWrap: "wrap",
     alignItems: "center",
     margin: "10px 20px 40px 20px",
-    maxHeight: "300px",
-    minHeight: "300px",
+    maxHeight: "234px",
+    minHeight: "234px",
     boxShadow: "1px 1px 3px rgba(0, 0, 0, 0.6)",
   })}
 `;
@@ -100,7 +91,6 @@ const Wrapper = styled.div`
 `;
 
 const Portfolio = styled.div`
-  background: #000;
   border-radius: 10px;
   background: url(${(props) => props.image}) center no-repeat;
   background-size: cover;
@@ -108,7 +98,7 @@ const Portfolio = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 10px;
+  margin: 20px 10px;
   width: 300px;
   height: 185px;
 
@@ -140,19 +130,17 @@ const Portfolio = styled.div`
     position: "relative",
     width: "240px",
     height: "148px",
-    marginBottom: "50px",
+    marginBottom: "60px",
   })}
 
   ${tablet({
     width: "210px",
     height: "130px",
-    marginBottom: "50px",
   })}
 
   ${mobile({
-    width: "288px",
-    height: "178px",
-    marginBottom: "50px",
+    width: "240px",
+    height: "148px",
   })}
 `;
 
@@ -163,10 +151,10 @@ const Title = styled.h2`
   padding-bottom: 5px;
   opacity: 0;
   transition: 1s;
-
+  text-transform: capitalize;
   ${tabletPro({
     position: "absolute",
-    bottom: "-70px",
+    bottom: "-65px",
     opacity: "1",
     fontSize: "25px",
   })}
@@ -180,7 +168,7 @@ const Title = styled.h2`
   ${mobile({
     opacity: "1",
     bottom: "-65px",
-    fontSize: "30px",
+    fontSize: "28px",
   })}
 `;
 
@@ -191,7 +179,7 @@ const LinkContainer = styled.div`
   transition: 1s;
 
   ${tabletPro({
-    opacity: "0.5",
+    opacity: "0.8",
   })}
 `;
 
@@ -199,40 +187,9 @@ const Link = styled.a`
   margin: 0 10px;
 `;
 
-const WebIcon = styled.img`
-  width: 93%;
-
-  &:hover {
-    transition: 0.5s;
-    opacity: 0.7;
-    transform: scale(1.1);
-  }
-
-  ${tablet({
-    width: "74%",
-  })}
-
-  ${mobile({
-    width: "90%",
-  })}
-`;
-
-const SourceIcon = styled.img`
-  width: 80%;
-  padding-top: 3px;
-  &:hover {
-    transition: 0.5s;
-    opacity: 0.7;
-    transform: scale(1.1);
-  }
-
-  ${tablet({
-    width: "64%",
-  })}
-
-  ${mobile({
-    width: "76%",
-  })}
+const Icon = styled.div`
+  font-size: 30px;
+  color: #7979f8;
 `;
 
 export default Portfolios;

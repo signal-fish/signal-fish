@@ -85,11 +85,14 @@ const Button = styled.button`
   font-size: 25px;
   min-height: 50px;
   width: 55px;
-  border: 1px solid #fff;
+  border: 1px solid ${(props) => props.theme.borderColor};
   border-radius: 5px;
   font-size: 23px;
 
-  color: ${(props) => props.selfPageNumber === props.currentPageNumber ? "#000" : "#fff"};
+  color: ${(props) =>
+    props.selfPageNumber === props.currentPageNumber
+      ? props.theme.activeBtnColor
+      : props.theme.btnColor};
   background: ${(props) =>
     props.selfPageNumber === props.currentPageNumber
       ? "linear-gradient(to bottom right, lightskyblue, lightgreen)"
@@ -101,7 +104,8 @@ const Button = styled.button`
     props.selfPageNumber === props.currentPageNumber && "none"};
 
   &:hover {
-    color: ${props => props.selfPageNumber !== props.currentPageNumber && "#000"};
+    color: ${(props) =>
+      props.selfPageNumber !== props.currentPageNumber && props.theme.activeBtnColor};
     background: ${(props) =>
       props.selfPageNumber !== props.currentPageNumber &&
       "linear-gradient(to bottom right, lightskyblue, lightgreen)"};

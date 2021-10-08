@@ -191,6 +191,14 @@ const portfolios = [
     webLink: "https://signal-fish.gitee.io/quiz/",
     sourceLink: "https://github.com/signal-fish/quiz",
   },
+  {
+    id: 25,
+    title: "dictionary",
+    category: "react",
+    image: "assets/portfolio/react/dictionary.png",
+    webLink: "https://signal-fish.gitee.io/dictionary/",
+    sourceLink: "https://github.com/signal-fish/dictionary",
+  },
 ];
 
 export default portfolios;

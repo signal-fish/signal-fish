@@ -11,7 +11,7 @@ const portfolios = [
     id: 2,
     title: "admin dashboard",
     category: "react",
-    image: "assets/portfolio/mern-stack/admin-dashboard.png",
+    image: "assets/portfolio/react/admin-dashboard.png",
     webLink: "https://signal-fish.gitee.io/admin-dashboard/",
     sourceLink: "https://github.com/signal-fish/admin-dashboard",
   },

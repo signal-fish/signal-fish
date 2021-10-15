@@ -7,14 +7,14 @@ const portfolios = [
   //   webLink: "",
   //   sourceLink: "",
   // },
-  // {
-  //   id: 2,
-  //   title: "dictinary app",
-  //   category: "react",
-  //   image: "assets/portfolio/mern-stack/admin-dashboard.png",
-  //   webLink: "",
-  //   sourceLink: "",
-  // },
+  {
+    id: 2,
+    title: "admin dashboard",
+    category: "react",
+    image: "assets/portfolio/mern-stack/admin-dashboard.png",
+    webLink: "https://signal-fish.gitee.io/admin-dashboard/",
+    sourceLink: "https://github.com/signal-fish/admin-dashboard",
+  },
   // {
   //   id: 3,
   //   title: "resume",

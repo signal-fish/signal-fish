@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { useTranslation } from "react-i18next";
 import { mobile, tablet, tabletPro, laptop } from "../../responsive";
 import { socials, skills, languages } from "../../sidebar-data";
-import { FaTools, FaLanguage } from "react-icons/fa";
+import { FaTools, FaLanguage, FaUniversity } from "react-icons/fa";
 
 const Sidebar = ({ theme }) => {
   const { t } = useTranslation();
@@ -13,12 +13,23 @@ const Sidebar = ({ theme }) => {
           <Image src="assets/signal-fish.jpg" alt="signal fish" />
           <Name>{t("Sidebar.Name")}</Name>
           <JobTitle>{t("Sidebar.JobTitle")}</JobTitle>
+          <School>
+            <SchoolIcon>
+              <FaUniversity />
+            </SchoolIcon>
+            <SchoolTitle>{t("Sidebar.School")}</SchoolTitle>
+          </School>
           <Social>
             {socials.map((social) => {
               const { id, icon, link, lightColor, darkColor } = social;
               return (
                 <LinkWrapper key={id}>
-                  <Link color={theme === 'light' ? lightColor : darkColor} href={link} target="_blank" rel="noreferrer noopener">
+                  <Link
+                    color={theme === "light" ? lightColor : darkColor}
+                    href={link}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
                     {icon}
                   </Link>
                 </LinkWrapper>
@@ -26,7 +37,6 @@ const Sidebar = ({ theme }) => {
             })}
           </Social>
         </Profile>
-
         <Info>
           {/* Skills */}
           <SkillsContainer>
@@ -212,6 +222,48 @@ const Info = styled.div`
   })}
 `;
 
+const School = styled.div`
+  display: flex;
+  align-items: center;
+  margin-top: -8px;
+  color: ${(props) => props.theme.fontColor};
+
+  ${tablet({
+    marginTop: "-5px",
+  })};
+
+`;
+
+const SchoolIcon = styled.div`
+  font-size: 24px;
+  margin: 8px 8px 5px 0;
+
+  ${tabletPro({
+    fontSize: "21px",
+  })}
+
+  ${mobile({
+    fontSize: "23px",
+    marginTop: "10px"
+  })}
+`;
+
+const SchoolTitle = styled.span`
+  font-size: 22px;
+
+  ${tabletPro({
+    fontSize: "18px",
+  })}
+
+  ${tablet({
+    fontSize: "16px",
+  })}
+
+  ${mobile({
+    fontSize: "20px",
+  })}
+`;
+
 const Social = styled.div`
   margin: 10px 5% 5px 5%;
   display: flex;
@@ -236,7 +288,7 @@ const LinkWrapper = styled.div`
 const Link = styled.a`
   text-decoration: none;
   cursor: pointer;
-  color: ${props => props.color};
+  color: ${(props) => props.color};
 
   &:hover {
     opacity: 0.6;

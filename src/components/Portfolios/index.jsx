@@ -146,21 +146,29 @@ const Portfolio = styled.div`
 
 const Title = styled.h2`
   color: #7979f8;
-  font-size: 30px;
+  font-size: 28px;
   margin: 15px 0;
   padding-bottom: 5px;
   opacity: 0;
   transition: 1s;
   text-transform: capitalize;
+
+  ${laptopPro({
+    fontSize: "25px",
+  })}
+
+  ${laptop({
+    fontSize: "22px",
+  })}
+
   ${tabletPro({
     position: "absolute",
     bottom: "-65px",
     opacity: "1",
-    fontSize: "25px",
   })}
 
   ${tablet({
-    fontSize: "22px",
+    fontSize: "18px",
     opacity: "1",
     bottom: "-60px",
   })}
@@ -168,7 +176,7 @@ const Title = styled.h2`
   ${mobile({
     opacity: "1",
     bottom: "-65px",
-    fontSize: "28px",
+    fontSize: "23px",
   })}
 `;
 

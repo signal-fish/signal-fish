@@ -7,7 +7,6 @@ import {AiOutlineGlobal} from 'react-icons/ai'
 
 const Languages = () => {
   const { t } = useTranslation();
-
   const handleChange = (language) => {
     i18next.changeLanguage(language);
   };

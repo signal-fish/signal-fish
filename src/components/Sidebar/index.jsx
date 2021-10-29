@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { useTranslation } from "react-i18next";
-import { mobile, tablet, tabletPro, laptop } from "../../responsive";
+import { mobile, tablet, tabletPro, laptop, laptopPro } from "../../responsive";
 import { socials, skills, languages } from "../../sidebar-data";
 import { FaTools, FaLanguage, FaUniversity } from "react-icons/fa";
 
@@ -227,29 +227,45 @@ const School = styled.div`
   align-items: center;
   margin-top: -8px;
   color: ${(props) => props.theme.fontColor};
+  margin: -5px 20px 0 20px;
 
-  ${tablet({
-    marginTop: "-5px",
+  ${laptopPro({
+    margin: "-5px 50px 0 50px",
   })};
 
+  ${laptop({
+    margin: "-5px 40px 0 40px",
+  })};
+
+  ${tabletPro({
+    margin: "-5px 30px 0 30px",
+  })};
+
+  ${tablet({
+    margin: "-5px 20px 0 20px",
+  })};
 `;
 
 const SchoolIcon = styled.div`
-  font-size: 24px;
+  font-size: 20px;
   margin: 8px 8px 5px 0;
 
   ${tabletPro({
     fontSize: "21px",
   })}
 
+  ${tablet({
+    fontSize: "21px",
+  })}
+
   ${mobile({
-    fontSize: "23px",
-    marginTop: "10px"
+    fontSize: "21px",
+    marginTop: "10px",
   })}
 `;
 
 const SchoolTitle = styled.span`
-  font-size: 22px;
+  font-size: 20px;
 
   ${tabletPro({
     fontSize: "18px",
@@ -260,7 +276,7 @@ const SchoolTitle = styled.span`
   })}
 
   ${mobile({
-    fontSize: "20px",
+    fontSize: "18px",
   })}
 `;
 

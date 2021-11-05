@@ -107,7 +107,7 @@ const Button = styled.div`
   })}
 
   ${mobile({
-    fontSize: "18px",
+    fontSize: "16px",
     padding: "10px 10px",
   })}
 `;

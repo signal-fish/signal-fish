@@ -18,7 +18,7 @@ const portfolios = [
   {
     id: "2-1",
     title: "admin dashboard",
-    category: "react",
+    category: "react ui",
     image: "assets/portfolio/react/admin-dashboard.png",
     webLink: "https://signal-fish.gitee.io/admin-dashboard/",
     sourceLink: "https://github.com/signal-fish/admin-dashboard",
@@ -26,7 +26,7 @@ const portfolios = [
   {
     id: "2-2",
     title: "fish shop",
-    category: "react",
+    category: "react ui",
     image: "assets/portfolio/react/fish-shop.png",
     webLink: "https://signal-fish.gitee.io/fish-shop/",
     sourceLink: "https://github.com/signal-fish/fish-shop",
@@ -34,7 +34,7 @@ const portfolios = [
   {
     id: "2-3",
     title: "dictionary",
-    category: "react",
+    category: "react ui",
     image: "assets/portfolio/react/dictionary.png",
     webLink: "https://signal-fish.gitee.io/dictionary/",
     sourceLink: "https://github.com/signal-fish/dictionary",
@@ -64,7 +64,7 @@ const portfolios = [
     sourceLink: "https://github.com/signal-fish/animated-moon",
   },
   {
-    id: 6,
+    id: "5-1",
     title: "tea cup",
     category: "css animation",
     image: "assets/portfolio/css-animation/animated-tea-cup.png",
@@ -72,12 +72,28 @@ const portfolios = [
     sourceLink: "https://github.com/signal-fish/animated-tea-cup",
   },
   {
-    id: 7,
+    id: "5-2",
     title: "clock",
     category: "css animation",
     image: "assets/portfolio/css-animation/clock.png",
     webLink: "https://signal-fish.gitee.io/clock/",
     sourceLink: "https://github.com/signal-fish/clock",
+  },
+  {
+    id: 6,
+    title: "forum",
+    category: "material ui",
+    image: "assets/portfolio/material-ui/forum.png",
+    webLink: "https://signal-fish.gitee.io/forum/",
+    sourceLink: "https://github.com/signal-fish/forum",
+  },
+  {
+    id: 7,
+    title: "profile page",
+    category: "react/redux",
+    image: "assets/portfolio/react-redux/profile-page.png",
+    webLink: "https://signal-fish.gitee.io/profile-page/",
+    sourceLink: "https://github.com/signal-fish/profile-page",
   },
   {
     id: 8,
@@ -90,7 +106,7 @@ const portfolios = [
   {
     id: 9,
     title: "birthday reminder",
-    category: "react",
+    category: "react ui",
     image: "assets/portfolio/react/birthday-reminder.png",
     webLink: "https://signal-fish.gitee.io/birthday-reminder/",
     sourceLink: "https://github.com/signal-fish/birthday-reminder",
@@ -106,7 +122,7 @@ const portfolios = [
   {
     id: 11,
     title: "tours",
-    category: "react",
+    category: "react ui",
     image: "assets/portfolio/react/tours.png",
     webLink: "https://signal-fish.gitee.io/tours/",
     sourceLink: "https://github.com/signal-fish/tours",
@@ -114,7 +130,7 @@ const portfolios = [
   {
     id: 12,
     title: "accordion",
-    category: "react",
+    category: "react ui",
     image: "assets/portfolio/react/accordion.png",
     webLink: "https://signal-fish.gitee.io/accordion/",
     sourceLink: "https://github.com/signal-fish/accordion",
@@ -122,7 +138,7 @@ const portfolios = [
   {
     id: 13,
     title: "menu",
-    category: "react",
+    category: "react ui",
     image: "assets/portfolio/react/menu.png",
     webLink: "https://signal-fish.gitee.io/menu/",
     sourceLink: "https://github.com/signal-fish/menu",
@@ -130,7 +146,7 @@ const portfolios = [
   {
     id: 14,
     title: "tabs",
-    category: "react",
+    category: "react ui",
     image: "assets/portfolio/react/tabs.png",
     webLink: "https://signal-fish.gitee.io/tabs/",
     sourceLink: "https://github.com/signal-fish/tabs",
@@ -138,7 +154,7 @@ const portfolios = [
   {
     id: 15,
     title: "slider",
-    category: "react",
+    category: "react ui",
     image: "assets/portfolio/react/slider.png",
     webLink: "https://signal-fish.gitee.io/slider/",
     sourceLink: "https://github.com/signal-fish/slider",
@@ -146,7 +162,7 @@ const portfolios = [
   {
     id: 16,
     title: "shopping list",
-    category: "react",
+    category: "react ui",
     image: "assets/portfolio/react/shopping-list.png",
     webLink: "https://signal-fish.gitee.io/shopping-list/",
     sourceLink: "https://github.com/signal-fish/shopping-list",
@@ -154,7 +170,7 @@ const portfolios = [
   {
     id: 17,
     title: "sidebar and modal",
-    category: "react",
+    category: "react ui",
     image: "assets/portfolio/react/sidebar-modal.png",
     webLink: "https://signal-fish.gitee.io/sidebar-modal/",
     sourceLink: "https://github.com/signal-fish/sidebar-modal",
@@ -162,7 +178,7 @@ const portfolios = [
   {
     id: 18,
     title: "navbar",
-    category: "react",
+    category: "react ui",
     image: "assets/portfolio/react/navbar.png",
     webLink: "https://signal-fish.gitee.io/navbar/",
     sourceLink: "https://github.com/signal-fish/navbar",
@@ -170,7 +186,7 @@ const portfolios = [
   {
     id: 19,
     title: "stripe",
-    category: "react",
+    category: "react ui",
     image: "assets/portfolio/react/stripe.png",
     webLink: "https://signal-fish.gitee.io/stripe/",
     sourceLink: "https://github.com/signal-fish/stripe",
@@ -178,7 +194,7 @@ const portfolios = [
   {
     id: 20,
     title: "cart",
-    category: "react",
+    category: "react ui",
     image: "assets/portfolio/react/cart.png",
     webLink: "https://signal-fish.gitee.io/cart/",
     sourceLink: "https://github.com/signal-fish/cart",
@@ -186,7 +202,7 @@ const portfolios = [
   {
     id: 21,
     title: "cocktails",
-    category: "react",
+    category: "react ui",
     image: "assets/portfolio/react/cocktails.png",
     webLink: "https://signal-fish.gitee.io/cocktails/",
     sourceLink: "https://github.com/signal-fish/cocktails",
@@ -194,7 +210,7 @@ const portfolios = [
   {
     id: 22,
     title: "markdown preview",
-    category: "react",
+    category: "react ui",
     image: "assets/portfolio/react/markdown-preview.png",
     webLink: "https://signal-fish.gitee.io/markdown-preview/",
     sourceLink: "https://github.com/signal-fish/markdown-preview",
@@ -202,7 +218,7 @@ const portfolios = [
   {
     id: 23,
     title: "dark mode",
-    category: "react",
+    category: "react ui",
     image: "assets/portfolio/react/dark-mode.png",
     webLink: "https://signal-fish.gitee.io/dark-mode/",
     sourceLink: "https://github.com/signal-fish/dark-mode",
@@ -210,12 +226,11 @@ const portfolios = [
   {
     id: 24,
     title: "quiz",
-    category: "react",
+    category: "react ui",
     image: "assets/portfolio/react/quiz.png",
     webLink: "https://signal-fish.gitee.io/quiz/",
     sourceLink: "https://github.com/signal-fish/quiz",
   },
-  
 ];
 
 export default portfolios;

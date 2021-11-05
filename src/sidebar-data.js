@@ -15,6 +15,8 @@ import {
   SiExpress,
   SiWebpack,
   SiStyledcomponents,
+  SiPostman,
+  SiMaterialui,
 } from "react-icons/si";
 
 
@@ -140,6 +142,22 @@ export const skills = [
     icon: <SiStyledcomponents />,
     level: "85%",
     lightColor: "#420420",
+    darkColor: "#8cc84b",
+  },
+  {
+    id: 13,
+    name: "Material UI",
+    icon: <SiMaterialui />,
+    level: "80%",
+    lightColor: "#0288d1",
+    darkColor: "#29b6f6",
+  },
+  {
+    id: 14,
+    name: "Postman",
+    icon: <SiPostman />,
+    level: "65%",
+    lightColor: "green",
     darkColor: "#8cc84b",
   },
 ];

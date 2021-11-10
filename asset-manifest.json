@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "/signal-fish/static/js/main.7c864ea6.chunk.js",
-    "main.js.map": "/signal-fish/static/js/main.7c864ea6.chunk.js.map",
+    "main.js": "/signal-fish/static/js/main.b3a4ac54.chunk.js",
+    "main.js.map": "/signal-fish/static/js/main.b3a4ac54.chunk.js.map",
     "runtime-main.js": "/signal-fish/static/js/runtime-main.2aae2cce.js",
     "runtime-main.js.map": "/signal-fish/static/js/runtime-main.2aae2cce.js.map",
-    "static/js/2.8d1ee65d.chunk.js": "/signal-fish/static/js/2.8d1ee65d.chunk.js",
-    "static/js/2.8d1ee65d.chunk.js.map": "/signal-fish/static/js/2.8d1ee65d.chunk.js.map",
+    "static/js/2.d9698aba.chunk.js": "/signal-fish/static/js/2.d9698aba.chunk.js",
+    "static/js/2.d9698aba.chunk.js.map": "/signal-fish/static/js/2.d9698aba.chunk.js.map",
     "index.html": "/signal-fish/index.html",
-    "static/js/2.8d1ee65d.chunk.js.LICENSE.txt": "/signal-fish/static/js/2.8d1ee65d.chunk.js.LICENSE.txt"
+    "static/js/2.d9698aba.chunk.js.LICENSE.txt": "/signal-fish/static/js/2.d9698aba.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.2aae2cce.js",
-    "static/js/2.8d1ee65d.chunk.js",
-    "static/js/main.7c864ea6.chunk.js"
+    "static/js/2.d9698aba.chunk.js",
+    "static/js/main.b3a4ac54.chunk.js"
   ]
 }

@@ -17,6 +17,7 @@ import {
   SiStyledcomponents,
   SiPostman,
   SiMaterialui,
+  SiAntdesign
 } from "react-icons/si";
 
 
@@ -154,6 +155,14 @@ export const skills = [
   },
   {
     id: 14,
+    name: "Ant Design",
+    icon: <SiAntdesign />,
+    level: "70%",
+    lightColor: "#0288d1",
+    darkColor: "#29b6f6",
+  },
+  {
+    id: 15,
     name: "Postman",
     icon: <SiPostman />,
     level: "65%",

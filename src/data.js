@@ -10,7 +10,7 @@ const portfolios = [
   {
     id: 2,
     title: "personal website",
-    category: "react",
+    category: "react ui",
     image: "assets/portfolio/react/signal-fish.png",
     webLink: "https://signal-fish.gitee.io/signal-fish/",
     sourceLink: "https://github.com/signal-fish/signal-fish",
@@ -246,6 +246,14 @@ const portfolios = [
     image: "assets/portfolio/react/quiz.png",
     webLink: "https://signal-fish.gitee.io/quiz/",
     sourceLink: "https://github.com/signal-fish/quiz",
+  },
+  {
+    id: 25,
+    title: "dropdown",
+    category: "html/css/js",
+    image: "assets/portfolio/html-css-js/dropdown.png",
+    webLink: "https://signal-fish.gitee.io/dropdown/",
+    sourceLink: "https://github.com/signal-fish/dropdown",
   },
 ];
 

@@ -255,6 +255,14 @@ const portfolios = [
     webLink: "https://signal-fish.gitee.io/dropdown/",
     sourceLink: "https://github.com/signal-fish/dropdown",
   },
+  {
+    id: 26,
+    title: "responsive navbar 1",
+    category: "html/css/js",
+    image: "assets/portfolio/html-css-js/responsive-navbar-1.png",
+    webLink: "https://signal-fish.gitee.io/responsive-navbar-1/",
+    sourceLink: "https://github.com/signal-fish/responsive-navbar-1",
+  },
 ];
 
 export default portfolios;

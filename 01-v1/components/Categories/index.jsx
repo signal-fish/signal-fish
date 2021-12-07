@@ -1,11 +1,7 @@
 import styled from "styled-components";
-import { useGlobalContext } from "../../context";
 import { mobile, tablet, tabletPro, laptop, laptopPro } from "../../responsive";
 
-const Categories = () => {
-  const { categories, currentCategory, setCurrentCategory } =
-    useGlobalContext();
-
+const Categories = ({ categories, setCurrentCategory, currentCategory }) => {
   const changeCategory = (category, currentCategory) => {
     if (category !== currentCategory) {
       setCurrentCategory(category);

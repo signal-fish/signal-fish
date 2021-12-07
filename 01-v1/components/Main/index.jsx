@@ -3,12 +3,21 @@ import Categories from "../Categories";
 import Portfolios from "../Portfolios";
 import Pagination from "../Pagination";
 import { useTranslation } from "react-i18next";
-import { useGlobalContext } from "../../context";
 import { AiFillProject } from "react-icons/ai";
 import { mobile, tablet, tabletPro } from "../../responsive";
 
-const Main = () => {
-  const { setSearchTerm } = useGlobalContext();
+const Main = ({
+  categories,
+  currentCategory,
+  setCurrentCategory,
+  portfolios,
+  currentPageNumber,
+  setCurrentPageNumber,
+  portfoliosPerPage,
+  pageCount,
+  generateArray,
+  setSearchTerm,
+}) => {
   const { t } = useTranslation();
 
   return (
@@ -28,9 +37,25 @@ const Main = () => {
           onChange={(event) => setSearchTerm(event.target.value)}
         ></Input>
       </SearchForm>
-      <Categories />
-      <Portfolios />
-      <Pagination />
+      <Categories
+        categories={categories}
+        currentCategory={currentCategory}
+        setCurrentCategory={setCurrentCategory}
+        setCurrentPageNumber={setCurrentPageNumber}
+      />
+      <Portfolios
+        portfolios={portfolios}
+        currentPageNumber={currentPageNumber}
+        portfoliosPerPage={portfoliosPerPage}
+      />
+      <Pagination
+        portfolios={portfolios}
+        currentPageNumber={currentPageNumber}
+        setCurrentPageNumber={setCurrentPageNumber}
+        portfoliosPerPage={portfoliosPerPage}
+        generateArray={generateArray}
+        pageCount={pageCount}
+      />
     </Container>
   );
 };
@@ -67,7 +92,7 @@ const ProjectIcon = styled.div`
   display: flex;
   align-items: center;
   margin-right: 5px;
-  transition: 0.6s;
+  transition: .6s;
 
   ${tabletPro({
     fontSize: "28px",
@@ -146,17 +171,17 @@ const SearchForm = styled.div`
 `;
 
 const Input = styled.input`
-  height: 50px;
-  width: calc(100% - 23px);
-  padding: 0 10px;
-  font-size: 22px;
-  border: none;
-  background: ${(props) => props.theme.searchFormBg};
-  color: ${(props) => props.theme.searchFormTextColor};
+height: 50px;
+width: calc(100% - 23px);
+padding: 0 10px;
+font-size: 22px;
+border: none;
+background: ${props => props.theme.searchFormBg};
+color: ${props => props.theme.searchFormTextColor};
 
-  ${mobile({
-    height: "40px",
-    fontSize: "20px",
-  })}
-`;
+${mobile({
+height: "40px",
+fontSize: "20px",
+})}
+`
 export default Main;

@@ -1,13 +1,15 @@
 import React from "react";
 import styled from "styled-components";
+import i18next from "i18next";
 import { useTranslation } from "react-i18next";
 import { GoChevronDown } from "react-icons/go";
-import { AiOutlineGlobal } from "react-icons/ai";
-import { useGlobalContext } from "../../context";
+import {AiOutlineGlobal} from 'react-icons/ai'
 
 const Languages = () => {
-  const { handleChange } = useGlobalContext();
   const { t } = useTranslation();
+  const handleChange = (language) => {
+    i18next.changeLanguage(language);
+  };
 
   return (
     <Container>
@@ -88,7 +90,7 @@ const Language = styled.button`
 
   &:hover {
     transform: scale(1.1);
-    background: ${(props) => props.theme.portfoliosBg};
+    background: ${props => props.theme.portfoliosBg};
   }
 `;
 

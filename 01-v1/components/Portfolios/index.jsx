@@ -1,12 +1,8 @@
 import styled from "styled-components";
 import { mobile, tablet, tabletPro, laptop, laptopPro } from "../../responsive";
 import { FaGithub, FaLink } from "react-icons/fa";
-import { useGlobalContext } from "../../context";
 
-const Portfolios = () => {
-  const { portfolios, currentPageNumber, portfoliosPerPage } =
-    useGlobalContext();
-
+const Portfolios = ({ portfolios, currentPageNumber, portfoliosPerPage }) => {
   const portfoliosDisplayed = currentPageNumber * portfoliosPerPage;
 
   return (

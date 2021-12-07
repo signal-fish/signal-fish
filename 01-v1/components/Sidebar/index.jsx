@@ -3,10 +3,8 @@ import { useTranslation } from "react-i18next";
 import { mobile, tablet, tabletPro, laptop, laptopPro } from "../../responsive";
 import { socials, skills, languages } from "../../sidebar-data";
 import { FaTools, FaLanguage, FaUniversity } from "react-icons/fa";
-import { useGlobalContext } from "../../context";
 
-const Sidebar = () => {
-  const { theme } = useGlobalContext();
+const Sidebar = ({ theme }) => {
   const { t } = useTranslation();
   return (
     <Container>

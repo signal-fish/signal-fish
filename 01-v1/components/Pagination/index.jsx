@@ -2,32 +2,26 @@ import styled from "styled-components";
 import Buttons from "../Buttons";
 import { mobile, tablet, tabletPro, laptop, laptopPro } from "../../responsive";
 import { useTranslation } from "react-i18next";
-import { useGlobalContext } from "../../context";
 
-const Pagination = () => {
-  const {
-    portfolios,
-    currentPageNumber,
-    setCurrentPageNumber,
-    portfoliosPerPage,
-    generateArray,
-    pageCount,
-  } = useGlobalContext();
-
+const Pagination = ({
+  portfolios,
+  currentPageNumber,
+  setCurrentPageNumber,
+  portfoliosPerPage,
+  generateArray,
+  pageCount,
+}) => {
   const { t } = useTranslation();
 
-  const handleFirstItem = () => {
-    const firstItem = document.getElementById("firstItem");
-    firstItem.scrollIntoView({
-      behavior: "smooth",
-    });
-  };
   const handleFirst = (currentPageNumber) => {
     if (currentPageNumber === 0) {
       return;
     }
     setCurrentPageNumber(0);
-    handleFirstItem();
+    const firstItem = document.getElementById("firstItem");
+    firstItem.scrollIntoView({
+      behavior: "smooth",
+    });
   };
 
   const handlePrev = (currentPageNumber) => {
@@ -36,7 +30,10 @@ const Pagination = () => {
       return;
     }
     setCurrentPageNumber(currentPageNumber - 1);
-    handleFirstItem();
+    const firstItem = document.getElementById("firstItem");
+    firstItem.scrollIntoView({
+      behavior: "smooth",
+    });
   };
 
   const handleNext = (currentPageNumber, pageCount) => {
@@ -46,7 +43,10 @@ const Pagination = () => {
         return;
       }
       setCurrentPageNumber(currentPageNumber + 1);
-      handleFirstItem();
+      const firstItem = document.getElementById("firstItem");
+      firstItem.scrollIntoView({
+        behavior: "smooth",
+      });
     }
   };
 
@@ -56,7 +56,10 @@ const Pagination = () => {
         return;
       }
       setCurrentPageNumber(pageCount - 1);
-      handleFirstItem();
+      const firstItem = document.getElementById("firstItem");
+      firstItem.scrollIntoView({
+        behavior: "smooth",
+      });
     }
   };
 
@@ -175,9 +178,7 @@ const FirstButton = styled.button`
   background-color: ${(props) =>
     props.currentPageNumber === 0 ? "lightgray" : "transparent"};
   color: ${(props) =>
-    props.currentPageNumber === 0
-      ? "rgba(0, 0, 0, 0.3)"
-      : props.theme.btnColor};
+    props.currentPageNumber === 0 ? "rgba(0, 0, 0, 0.3)" : props.theme.btnColor};
   border: ${(props) => props.currentPageNumber === 0 && "lightgray"};
 
   &:hover {
@@ -244,8 +245,7 @@ const PrevButton = styled.button`
   border: ${(props) => props.currentPageNumber === 0 && "lightgray"};
 
   &:hover {
-    color: ${(props) =>
-      props.currentPageNumber !== 0 && props.theme.activeBtnColor};
+    color: ${(props) => props.currentPageNumber !== 0 && props.theme.activeBtnColor};
     background: ${(props) =>
       props.currentPageNumber !== 0 &&
       "linear-gradient(to bottom right, lightskyblue, lightgreen)"};
@@ -288,7 +288,7 @@ const PrevButton = styled.button`
 `;
 
 const NextButton = styled.button`
-  border: 1px solid ${(props) => props.theme.borderColor};
+  border: 1px solid ${props => props.theme.borderColor};
   cursor: pointer;
   padding: 8px 20px;
   font-size: 25px;
@@ -372,7 +372,7 @@ const NextButton = styled.button`
 `;
 
 const LastButton = styled.button`
-  border: 1px solid ${(props) => props.theme.borderColor};
+  border: 1px solid ${props => props.theme.borderColor};
   cursor: pointer;
   padding: 8px 20px;
   font-size: 25px;
@@ -395,19 +395,16 @@ const LastButton = styled.button`
   color: ${(props) =>
     props.pageCount === 0
       ? "rgba(0, 0, 0, 0.3)"
-      : props.currentPageNumber === props.pageCount - 1
-      ? "rgba(0, 0, 0, 0.3)"
-      : props.theme.btnColor};
+      : props.currentPageNumber === props.pageCount - 1 ?
+        "rgba(0, 0, 0, 0.3)" : props.theme.btnColor};
   border: ${(props) =>
     props.pageCount === 0
       ? "lightgray"
       : props.currentPageNumber === props.pageCount - 1 && "lightgray"};
 
   &:hover {
-    color: ${(props) =>
-      props.pageCount !== 0 &&
-      props.currentPageNumber !== props.pageCount - 1 &&
-      props.theme.activeBtnColor};
+    color: ${props => props.pageCount !== 0 &&
+      props.currentPageNumber !== props.pageCount - 1 && props.theme.activeBtnColor};
     background: ${(props) =>
       props.pageCount !== 0 &&
       props.currentPageNumber !== props.pageCount - 1 &&

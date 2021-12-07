@@ -1,9 +1,7 @@
 import styled from "styled-components";
 import { FaSun, FaMoon } from "react-icons/fa";
-import { useGlobalContext } from "../../context";
 
-const DarkMode = () => {
-  const { theme, themeToggler } = useGlobalContext();
+const DarkMode = ({ theme, themeToggler }) => {
   return (
     <Container>
       <Wrapper onClick={themeToggler}>
@@ -27,7 +25,7 @@ const Container = styled.div`
   left: 3px;
   top: 3px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-start
 `;
 
 const Wrapper = styled.div`
@@ -62,7 +60,7 @@ const Circle = styled.div`
   left: -1px;
   top: -1px;
   border-radius: 50%;
-  transition: all linear 0.6s;
+  transition: 0.6s;
   transform: ${(props) =>
     props.currentTheme === "light" ? "translateX(0)" : "translateX(100%)"};
 `;

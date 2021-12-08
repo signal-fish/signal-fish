@@ -103,14 +103,22 @@ const portfolios = [
     webLink: "https://signal-fish.gitee.io/tech/",
     sourceLink: "https://github.com/signal-fish/tech",
   },
-  // {
-  //   id: 9,
-  //   title: "resume",
-  //   category: "html/css/js",
-  //   image: "assets/portfolio/html-css-js/resume.png",
-  //   webLink: "https://signal-fish.gitee.io/resume/",
-  //   sourceLink: "https://github.com/signal-fish/resume",
-  // },
+  {
+    id: 9,
+    title: "fitness",
+    category: "jquery",
+    image: "assets/portfolio/jquery/fitness.png",
+    webLink: "https://signal-fish.gitee.io/fitness/",
+    sourceLink: "https://github.com/signal-fish/fitness",
+  },
+  {
+    id: 10,
+    title: "dsa",
+    category: "DSA",
+    image: "assets/portfolio/dsa/dsa.png",
+    webLink: "https://gitee.com/signal-fish/dsa",
+    sourceLink: "https://github.com/signal-fish/dsa",
+  },
   {
     id: 118,
     title: "shining text",
@@ -120,7 +128,7 @@ const portfolios = [
     sourceLink: "https://github.com/signal-fish/shining-text",
   },
   {
-    id: 9,
+    id: 11,
     title: "birthday reminder",
     category: "react ui",
     image: "assets/portfolio/react/birthday-reminder.png",
@@ -128,7 +136,7 @@ const portfolios = [
     sourceLink: "https://github.com/signal-fish/birthday-reminder",
   },
   {
-    id: 10,
+    id: 12,
     title: "loading",
     category: "css animation",
     image: "assets/portfolio/css-animation/loading.png",
@@ -136,7 +144,7 @@ const portfolios = [
     sourceLink: "https://github.com/signal-fish/loading",
   },
   {
-    id: 11,
+    id: 13,
     title: "tours",
     category: "react ui",
     image: "assets/portfolio/react/tours.png",
@@ -144,7 +152,7 @@ const portfolios = [
     sourceLink: "https://github.com/signal-fish/tours",
   },
   {
-    id: 12,
+    id: "13-1",
     title: "accordion",
     category: "react ui",
     image: "assets/portfolio/react/accordion.png",
@@ -152,7 +160,7 @@ const portfolios = [
     sourceLink: "https://github.com/signal-fish/accordion",
   },
   {
-    id: 13,
+    id: "13-2",
     title: "menu",
     category: "react ui",
     image: "assets/portfolio/react/menu.png",
@@ -257,7 +265,7 @@ const portfolios = [
   },
   {
     id: 26,
-    title: "responsive navbar 1",
+    title: "responsive navbar",
     category: "html/css/js",
     image: "assets/portfolio/html-css-js/responsive-navbar-1.png",
     webLink: "https://signal-fish.gitee.io/responsive-navbar-1/",

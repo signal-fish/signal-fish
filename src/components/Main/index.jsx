@@ -22,14 +22,14 @@ const Main = () => {
       <HrWrapper>
         <Hr></Hr>
       </HrWrapper>
+      <Categories />
+      <Portfolios />
       <SearchForm>
         <Input
           placeholder={t("Main.SearchFormPlaceholder")}
           onChange={(event) => setSearchTerm(event.target.value)}
         ></Input>
       </SearchForm>
-      <Categories />
-      <Portfolios />
       <Pagination />
     </Container>
   );
@@ -147,16 +147,21 @@ const SearchForm = styled.div`
 
 const Input = styled.input`
   height: 50px;
-  width: calc(100% - 23px);
+  width: calc(100% - 22px);
   padding: 0 10px;
   font-size: 22px;
   border: none;
   background: ${(props) => props.theme.searchFormBg};
   color: ${(props) => props.theme.searchFormTextColor};
 
+  &:focus {
+    outline: none;
+  }
+
   ${mobile({
     height: "40px",
     fontSize: "20px",
+    marginBottom: "35px",
   })}
 `;
 export default Main;

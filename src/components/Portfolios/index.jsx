@@ -55,6 +55,7 @@ const Container = styled.div`
   grid-template-rows: repeat(999, 1fr);
   column-gap: 50px;
   margin-left: 20px;
+  margin-top: 15px;
   overflow-x: hidden;
   overflow-y: scroll;
   position: relative;
@@ -82,7 +83,7 @@ const Container = styled.div`
     display: "flex",
     flexWrap: "wrap",
     alignItems: "center",
-    margin: "10px 20px 40px 20px",
+    margin: "10px 20px 10px 20px",
     maxHeight: "234px",
     minHeight: "234px",
     boxShadow: "1px 1px 3px rgba(0, 0, 0, 0.6)",

@@ -30,20 +30,20 @@ export const socials = [
     darkColor: "#7979f8",
   },
   {
-    id: 3,
+    id: 2,
     name: "website",
     icon: <BsFillPersonFill />,
     link: "https://signal-fish.gitee.io/",
     lightColor: "#000",
-    darkColor: "#fff",
+    darkColor: "#7979f8",
   },
   {
-    id: 4,
+    id: 3,
     name: "linkedIn",
     icon: <FaLinkedin />,
     link: "https://www.linkedin.com/in/signal-fish-552aaa211/",
-    lightColor: "#0177b5",
-    darkColor: "#0492df",
+    lightColor: "#000",
+    darkColor: "#7979f8",
   },
 ];
 

@@ -17,9 +17,11 @@ import {
   SiAntdesign,
   SiJquery,
   SiRedux,
+  SiGo,
+  SiDjango,
 } from "react-icons/si";
 import { BsFillBootstrapFill, BsFillPersonFill } from "react-icons/bs";
-
+import { DiGo } from "react-icons/";
 export const socials = [
   {
     id: 1,
@@ -136,7 +138,6 @@ export const skills = [
     lightColor: "#7979f8",
     darkColor: "lightblue",
   },
-
   {
     id: 10,
     name: "Python",
@@ -147,6 +148,14 @@ export const skills = [
   },
   {
     id: 11,
+    name: "Golang",
+    icon: <SiGo style={{ fontSize: "28", marginLeft: "-6px" }} />,
+    level: "70%",
+    lightColor: "#000000",
+    darkColor: "#00acd7",
+  },
+  {
+    id: 12,
     name: "Ubuntu",
     icon: <FaUbuntu />,
     level: "50%",
@@ -154,7 +163,7 @@ export const skills = [
     darkColor: "#8cc84b",
   },
   {
-    id: 12,
+    id: 13,
     name: "NodeJS",
     icon: <FaNodeJs />,
     level: "45%",
@@ -162,7 +171,7 @@ export const skills = [
     darkColor: "#8cc84b",
   },
   {
-    id: 13,
+    id: 14,
     name: "Express",
     icon: <SiExpress />,
     level: "50%",
@@ -170,9 +179,17 @@ export const skills = [
     darkColor: "#fff",
   },
   {
-    id: 14,
+    id: 15,
     name: "MongoDB",
     icon: <SiMongodb />,
+    level: "30%",
+    lightColor: "green",
+    darkColor: "#6cac48",
+  },
+  {
+    id: 16,
+    name: "Django",
+    icon: <SiDjango />,
     level: "30%",
     lightColor: "green",
     darkColor: "#6cac48",

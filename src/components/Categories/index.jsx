@@ -3,7 +3,7 @@ import { useGlobalContext } from "../../context";
 import { mobile, tablet, tabletPro, laptop, laptopPro } from "../../responsive";
 
 const Categories = () => {
-  const { categories, currentCategory, setCurrentCategory } =
+  const { categories, currentCategory, setCurrentCategory, setSearchTerm } =
     useGlobalContext();
 
   const changeCategory = (category, currentCategory) => {

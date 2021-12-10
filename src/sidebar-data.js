@@ -21,7 +21,7 @@ import {
   SiDjango,
 } from "react-icons/si";
 import { BsFillBootstrapFill, BsFillPersonFill } from "react-icons/bs";
-import { DiGo } from "react-icons/";
+
 export const socials = [
   {
     id: 1,
@@ -91,7 +91,7 @@ export const skills = [
     darkColor: "lightskyblue",
   },
   {
-    id: 5,
+    id: "5-1",
     name: "Bootstrap",
     icon: <BsFillBootstrapFill />,
     level: "60%",
@@ -115,7 +115,7 @@ export const skills = [
     darkColor: "#29b6f6",
   },
   {
-    id: 9,
+    id: "7-1",
     name: "jQuery",
     icon: <SiJquery />,
     level: "70%",
@@ -191,8 +191,8 @@ export const skills = [
     name: "Django",
     icon: <SiDjango />,
     level: "30%",
-    lightColor: "green",
-    darkColor: "#6cac48",
+    lightColor: "#000000",
+    darkColor: "#ffffff",
   },
 ];
 

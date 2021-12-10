@@ -48,6 +48,14 @@ const portfolios = [
     sourceLink: "https://github.com/signal-fish/resume",
   },
   {
+    id: "3-1",
+    title: "plantX",
+    category: "html/css/js",
+    image: "assets/portfolio/html-css-js/plantx.png",
+    webLink: "https://signal-fish.gitee.io/plantx/",
+    sourceLink: "https://github.com/signal-fish/plantx",
+  },
+  {
     id: 4,
     title: "corporate",
     category: "bootstrap",

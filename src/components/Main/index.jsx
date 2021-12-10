@@ -8,7 +8,7 @@ import { AiFillProject } from "react-icons/ai";
 import { mobile, tablet, tabletPro } from "../../responsive";
 
 const Main = () => {
-  const { setSearchTerm } = useGlobalContext();
+  const { searchTerm, setSearchTerm } = useGlobalContext();
   const { t } = useTranslation();
 
   return (
@@ -27,6 +27,7 @@ const Main = () => {
       <SearchForm>
         <Input
           placeholder={t("Main.SearchFormPlaceholder")}
+          value={searchTerm}
           onChange={(event) => setSearchTerm(event.target.value)}
         ></Input>
       </SearchForm>

@@ -2,7 +2,7 @@
   "Sidebar": {
     "Name": "Signal Fish",
     "JobTitle": "Web Developer",
-    "School": "Xingning No.1 High School",
+    "School": "Guangdong University of Technology",
     "SkillTitle": "Skills",
     "Tooltip": {
       "html5": "HTML 5",
@@ -62,7 +62,7 @@
       "next": "Next",
       "last": "Last"
     }
-  }, 
+  },
 
   "Languages": {
     "en": "English",

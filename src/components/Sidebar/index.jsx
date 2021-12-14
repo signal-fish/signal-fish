@@ -16,9 +16,12 @@ const Sidebar = () => {
           <Name>{t("Sidebar.Name")}</Name>
           <JobTitle>{t("Sidebar.JobTitle")}</JobTitle>
           <School>
-            <SchoolIcon>
-              <FaUniversity />
-            </SchoolIcon>
+          {
+            theme === "light" ?
+            <SchoolIcon src="assets/icons/gdut1.svg" />
+            :
+            <SchoolIcon src="assets/icons/gdut.svg" />
+          }
             <SchoolTitle>{t("Sidebar.School")}</SchoolTitle>
           </School>
           <Social>
@@ -248,37 +251,20 @@ const School = styled.div`
   })};
 `;
 
-const SchoolIcon = styled.div`
-  font-size: 20px;
-  margin: 8px 8px 5px 0;
-
-  ${tabletPro({
-    fontSize: "21px",
-  })}
-
-  ${tablet({
-    fontSize: "21px",
-  })}
-
-  ${mobile({
-    fontSize: "21px",
-    marginTop: "10px",
-  })}
+const SchoolIcon = styled.img`
+  width: 23px;
+  height: 23px;
+  margin-right:8px
 `;
 
 const SchoolTitle = styled.span`
   font-size: 20px;
-
   ${tabletPro({
     fontSize: "18px",
   })}
 
   ${tablet({
     fontSize: "16px",
-  })}
-
-  ${mobile({
-    fontSize: "18px",
   })}
 `;
 

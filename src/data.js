@@ -124,8 +124,8 @@ const portfolios = [
     title: "dsa",
     category: "DSA",
     image: "assets/portfolio/dsa/dsa.png",
-    webLink: "https://gitee.com/signal-fish/dsa",
-    sourceLink: "https://github.com/signal-fish/dsa",
+    webLink: "https://gitee.com/signal-fish/data-structures-and-algorithms/tree/master/c",
+    sourceLink: "https://github.com/signal-fish/data-structures-and-algorithms/tree/master/c",
   },
   {
     id: 118,

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { useTranslation } from "react-i18next";
 import { mobile, tablet, tabletPro, laptop, laptopPro } from "../../responsive";
 import { socials, skills, languages } from "../../sidebar-data";
-import { FaTools, FaLanguage, FaUniversity } from "react-icons/fa";
+import { FaTools, FaLanguage } from "react-icons/fa";
 import { useGlobalContext } from "../../context";
 
 const Sidebar = () => {
@@ -12,7 +12,7 @@ const Sidebar = () => {
     <Container>
       <Wrapper>
         <Profile>
-          <Image src="assets/signal-fish.jpg" alt="signal fish" />
+          <Image src="assets/signal_2023.jpg" alt="signal fish" />
           <Name>{t("Sidebar.Name")}</Name>
           <JobTitle>{t("Sidebar.JobTitle")}</JobTitle>
           <School>
@@ -141,25 +141,25 @@ const Profile = styled.div`
 `;
 
 const Image = styled.img`
-  width: 200px;
+  width: 245px;
   height: 245px;
   border-radius: 50%;
   object-fit: cover;
   margin-top: 25px;
 
   ${tabletPro({
-    width: "160px",
+    width: "200px",
     height: "200px",
   })};
 
   ${tablet({
     width: "125px",
-    height: "155px",
+    height: "125px",
   })};
 
   ${mobile({
     width: "200px",
-    height: "250px",
+    height: "200px",
   })}
 `;
 
